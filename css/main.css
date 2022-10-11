@@ -99,12 +99,14 @@ a:focus, a:hover {
     font-weight: 100;
 }
 
-#profile_info ion-icon {
+#profile_info object {
     color: gray;
     font-size: 16px;
+    margin: 1px 5px 0px 0px;
 }
 
 .profile_info_item {
+    margin: 8px 0px;
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
