@@ -1,3 +1,13 @@
+a {
+    color: #1772d0;
+    text-decoration: none;
+}
+  
+a:focus, a:hover {
+    color: #f09228;
+    text-decoration: none;
+}
+
 #main {
     width: 80%;
     margin: 100px auto 200px;
@@ -81,4 +91,12 @@
     margin-left: 32px;
     font-size: 16px;
     font-weight: 100;
+}
+
+#profile_intro {
+    width: 800px;
+    margin: 25px auto 50px;
+    font-size: 16px;
+    font-weight: 400;
+    text-align: justify;
 }
