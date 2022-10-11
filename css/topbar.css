@@ -11,6 +11,17 @@
     user-select: none;
 }
 
+#topbar::before
+{
+    content: "";
+    position: relative;
+    left: 0px;
+    top: 0px;
+    width: 3px;
+    height: 100%;
+    background-color: rgb(32, 163, 196);
+}
+
 #topbar_title
 {
     height: 50px;
@@ -31,11 +42,11 @@
 
 .topbar_button
 {
-    height: 50px;
+    height: 25px;
     color: gray;
     font-size: 16px;
     font-weight: 100;
-    padding: 0 16px;
+    margin: 0 16px;
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -45,8 +56,8 @@
 .topbar_button::before
 {
     content: "";
-    position: absolute;
-    left: 0px;
+    position: relative;
+    left: -8px;
     top: 0px;
     width: 2px;
     height: 0%;
@@ -56,7 +67,7 @@
     transition-timing-function: ease;
 }
 
-.topbar_button:hover::after
+.topbar_button:hover::before
 {
-    height: 100%;
+    height: 96%;
 }
