@@ -136,9 +136,10 @@ a:focus, a:hover {
 #profile_links div::after {
     position: absolute;
     left: -18px;
-    top: -25px;
+    top: 40px;
     width: 72px;
     height: 18px;
+    border-radius: 9px;
     color: white;
     font-size: 12px;
     display: flex;
@@ -160,6 +161,8 @@ a:focus, a:hover {
 }
 
 #profile_links_email::after {
+    left: -36px !important;
+    width: 108px !important;
     content: "Personal email";
     background-color: #5c7b37;    
 }
@@ -169,7 +172,7 @@ a:focus, a:hover {
     background-color: #fb7299;    
 }
 
-#profile_links_email::after {
+#profile_links_zhihu::after {
     content: "Zhihu";
     background-color: #056DE8;    
 }
