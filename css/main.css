@@ -120,16 +120,20 @@ a:focus, a:hover {
 #profile_links {
     height: 36px;
     width: 100%;
+    margin-bottom: 16px;
     display: flex;
     justify-content: space-around;
     align-items: center;
 }
 
-#profile_links object {
+#profile_links div {
     position: relative;
+    width: 36px;
+    height: 36px;
+    cursor: pointer;
 }
 
-#profile_links object::after {
+#profile_links div::after {
     position: absolute;
     left: -18px;
     top: -25px;
@@ -146,7 +150,7 @@ a:focus, a:hover {
     transition-timing-function: ease;
 }
 
-#profile_links object:hover::after {
+#profile_links div:hover::after {
     opacity: 1;
 }
 
