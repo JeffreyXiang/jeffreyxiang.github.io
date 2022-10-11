@@ -41,7 +41,6 @@ a:focus, a:hover {
 
 #profile_card {
     position: relative;
-    width: 384px;
     height: 400px;
     margin: 10px 15px;
     padding-left: 16px;
@@ -100,9 +99,7 @@ a:focus, a:hover {
 }
 
 #profile_info object {
-    color: gray;
-    font-size: 16px;
-    margin: 1px 5px 0px 0px;
+    margin: 1px 8px 0px 0px;
 }
 
 .profile_info_item {
@@ -120,3 +117,55 @@ a:focus, a:hover {
     text-align: justify;
 }
 
+#profile_links {
+    height: 36px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#profile_links object {
+    position: relative;
+}
+
+#profile_links object::after {
+    position: absolute;
+    left: -18px;
+    top: -25px;
+    width: 72px;
+    height: 18px;
+    color: white;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition-duration: 0.25s;
+    transition-property: opacity;
+    transition-timing-function: ease;
+}
+
+#profile_links object:hover::after {
+    opacity: 1;
+}
+
+#profile_links_github::after {
+    content: "Github";
+    background-color: #24292f;
+}
+
+#profile_links_email::after {
+    content: "Personal email";
+    background-color: #5c7b37;    
+}
+
+#profile_links_bilibili::after {
+    content: "Bilibili";
+    background-color: #fb7299;    
+}
+
+#profile_links_email::after {
+    content: "Zhihu";
+    background-color: #056DE8;    
+}
