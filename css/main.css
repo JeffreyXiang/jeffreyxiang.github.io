@@ -1,45 +1,84 @@
 #main {
-    width: 60%;
-    margin: 0px auto;
+    width: 80%;
+    margin: 100px auto 200px;
 }
 
 .title {
-    margin: 32px auto;
-    color: black;
-    font-size: 96px;
+    margin: 32px;
+    color: gray;
+    font-size: 64px;
     font-weight: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 #profile {
-    height: 400px;
     width: 100%;
     display: flex;
+    justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
+    margin: -10px -15px
 }
 
 #profile_photo {
-    height: 360px;
-    width: 360px;
+    height: 400px;
+    width: 400px;
+    margin: 10px 15px;
 }
 
-#profile_text {
-    flex-grow: 1;
+#profile_card {
+    position: relative;
+    width: 384px;
     height: 400px;
-    width: 100%;
-    margin-left: 50px;
+    margin: 10px 15px;
+    padding-left: 16px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: flex-start;
 }
 
-#profile_text::before
-{
+#profile_card::before {
     content: "";
-    position: relative;
-    left: -10px;
+    position: absolute;
+    left: 0px;
     top: 0px;
     width: 3px;
     height: 100%;
     background-color: rgb(32, 163, 196);
+}
+
+#profile_name_en {
+    font-size: 36px;
+    font-weight: 100;
+}
+
+#profile_name_en::before {
+    content: "EN.";
+    margin-right: 5px;
+    color: gray;
+    font-size: 16px;
+    font-weight: 100;
+}
+
+#profile_name_zh {
+    font-size: 36px;
+    font-weight: 100;
+}
+
+#profile_name_zh::before {
+    content: "ZH.";
+    margin-right: 5px;
+    color: gray;
+    font-size: 16px;
+    font-weight: 100;
+}
+
+#profile_name_web {
+    margin-top: 5px;
+    margin-left: 32px;
+    font-size: 16px;
+    font-weight: 100;
 }
