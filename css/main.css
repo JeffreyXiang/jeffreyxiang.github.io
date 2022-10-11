@@ -104,6 +104,12 @@ a:focus, a:hover {
     font-size: 16px;
 }
 
+.profile_info_item {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
 #profile_intro {
     width: 800px;
     margin: 10px auto 25px;
