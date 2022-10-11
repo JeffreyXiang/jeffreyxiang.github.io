@@ -29,7 +29,8 @@ a:focus, a:hover {
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    margin: -10px -15px
+    margin: 0px -15px;
+    padding-top: 25px;
 }
 
 #profile_photo {
@@ -93,6 +94,16 @@ a:focus, a:hover {
     font-weight: 100;
 }
 
+#profile_info {
+    font-size: 16px;
+    font-weight: 100;
+}
+
+#profile_info ion-icon {
+    color: gray;
+    font-size: 16px;
+}
+
 #profile_intro {
     width: 800px;
     margin: 10px auto 25px;
@@ -100,3 +111,4 @@ a:focus, a:hover {
     font-weight: 400;
     text-align: justify;
 }
+
