@@ -209,7 +209,7 @@ a:focus, a:hover {
 .publication_item_text {
     position: relative;
     height: 200px;
-    width: 600px;
+    width: 800px;
     margin-left: 25px;
     padding-left: 16px;
     display: flex;

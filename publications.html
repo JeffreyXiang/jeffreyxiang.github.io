@@ -25,3 +25,13 @@ title: Jianfeng Xiang | Publications
         </div>
     {% endfor %}
 </div>
+
+<script type="text/javascript">
+    window.onload = function(){
+        for (let text in document.getElementsByClassName('publication_item_text')) {
+            let title_height = text.children[0].offsetHeight;
+            let margin = (title_height -4) % 20 + 10;
+            text.children[4].style.marginTop = margin;
+        }
+    };
+</script>
