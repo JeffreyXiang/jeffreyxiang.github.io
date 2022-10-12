@@ -1,0 +1,240 @@
+@font-face {
+    font-family: 'Config';
+    src: url('Config-Black.eot');
+    src: local('Config Black'), local('Config-Black'),
+        url('Config-Black.eot?#iefix') format('embedded-opentype'),
+        url('Config-Black.woff2') format('woff2'),
+        url('Config-Black.woff') format('woff'),
+        url('Config-Black.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Config';
+    src: url('Config-BoldItalic.eot');
+    src: local('Config Bold Italic'), local('Config-BoldItalic'),
+        url('Config-BoldItalic.eot?#iefix') format('embedded-opentype'),
+        url('Config-BoldItalic.woff2') format('woff2'),
+        url('Config-BoldItalic.woff') format('woff'),
+        url('Config-BoldItalic.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Config';
+    src: url('Config-ExtraBoldItalic.eot');
+    src: local('Config ExtraBold Italic'), local('Config-ExtraBoldItalic'),
+        url('Config-ExtraBoldItalic.eot?#iefix') format('embedded-opentype'),
+        url('Config-ExtraBoldItalic.woff2') format('woff2'),
+        url('Config-ExtraBoldItalic.woff') format('woff'),
+        url('Config-ExtraBoldItalic.ttf') format('truetype');
+    font-weight: 800;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Config';
+    src: url('Config-ExtraLightItalic.eot');
+    src: local('Config ExtraLight Italic'), local('Config-ExtraLightItalic'),
+        url('Config-ExtraLightItalic.eot?#iefix') format('embedded-opentype'),
+        url('Config-ExtraLightItalic.woff2') format('woff2'),
+        url('Config-ExtraLightItalic.woff') format('woff'),
+        url('Config-ExtraLightItalic.ttf') format('truetype');
+    font-weight: 200;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Config';
+    src: url('Config-ExtraBold.eot');
+    src: local('Config ExtraBold'), local('Config-ExtraBold'),
+        url('Config-ExtraBold.eot?#iefix') format('embedded-opentype'),
+        url('Config-ExtraBold.woff2') format('woff2'),
+        url('Config-ExtraBold.woff') format('woff'),
+        url('Config-ExtraBold.ttf') format('truetype');
+    font-weight: 800;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Config';
+    src: url('Config-BlackItalic.eot');
+    src: local('Config Black Italic'), local('Config-BlackItalic'),
+        url('Config-BlackItalic.eot?#iefix') format('embedded-opentype'),
+        url('Config-BlackItalic.woff2') format('woff2'),
+        url('Config-BlackItalic.woff') format('woff'),
+        url('Config-BlackItalic.ttf') format('truetype');
+    font-weight: 900;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Config';
+    src: url('Config-Bold.eot');
+    src: local('Config Bold'), local('Config-Bold'),
+        url('Config-Bold.eot?#iefix') format('embedded-opentype'),
+        url('Config-Bold.woff2') format('woff2'),
+        url('Config-Bold.woff') format('woff'),
+        url('Config-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Config';
+    src: url('Config-ExtraLight.eot');
+    src: local('Config ExtraLight'), local('Config-ExtraLight'),
+        url('Config-ExtraLight.eot?#iefix') format('embedded-opentype'),
+        url('Config-ExtraLight.woff2') format('woff2'),
+        url('Config-ExtraLight.woff') format('woff'),
+        url('Config-ExtraLight.ttf') format('truetype');
+    font-weight: 200;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Config';
+    src: url('Config-Italic.eot');
+    src: local('Config Italic'), local('Config-Italic'),
+        url('Config-Italic.eot?#iefix') format('embedded-opentype'),
+        url('Config-Italic.woff2') format('woff2'),
+        url('Config-Italic.woff') format('woff'),
+        url('Config-Italic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Config';
+    src: url('Config-Medium.eot');
+    src: local('Config Medium'), local('Config-Medium'),
+        url('Config-Medium.eot?#iefix') format('embedded-opentype'),
+        url('Config-Medium.woff2') format('woff2'),
+        url('Config-Medium.woff') format('woff'),
+        url('Config-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Config';
+    src: url('Config-Light.eot');
+    src: local('Config Light'), local('Config-Light'),
+        url('Config-Light.eot?#iefix') format('embedded-opentype'),
+        url('Config-Light.woff2') format('woff2'),
+        url('Config-Light.woff') format('woff'),
+        url('Config-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Config Text';
+    src: url('Config-TextItalic.eot');
+    src: local('Config Text Italic'), local('Config-TextItalic'),
+        url('Config-TextItalic.eot?#iefix') format('embedded-opentype'),
+        url('Config-TextItalic.woff2') format('woff2'),
+        url('Config-TextItalic.woff') format('woff'),
+        url('Config-TextItalic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Config';
+    src: url('Config-LightItalic.eot');
+    src: local('Config Light Italic'), local('Config-LightItalic'),
+        url('Config-LightItalic.eot?#iefix') format('embedded-opentype'),
+        url('Config-LightItalic.woff2') format('woff2'),
+        url('Config-LightItalic.woff') format('woff'),
+        url('Config-LightItalic.ttf') format('truetype');
+    font-weight: 300;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Config';
+    src: url('Config-Regular.eot');
+    src: local('Config Regular'), local('Config-Regular'),
+        url('Config-Regular.eot?#iefix') format('embedded-opentype'),
+        url('Config-Regular.woff2') format('woff2'),
+        url('Config-Regular.woff') format('woff'),
+        url('Config-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Config';
+    src: url('Config-Thin.eot');
+    src: local('Config Thin'), local('Config-Thin'),
+        url('Config-Thin.eot?#iefix') format('embedded-opentype'),
+        url('Config-Thin.woff2') format('woff2'),
+        url('Config-Thin.woff') format('woff'),
+        url('Config-Thin.ttf') format('truetype');
+    font-weight: 100;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Config Text';
+    src: url('Config-Text.eot');
+    src: local('Config Text'), local('Config-Text'),
+        url('Config-Text.eot?#iefix') format('embedded-opentype'),
+        url('Config-Text.woff2') format('woff2'),
+        url('Config-Text.woff') format('woff'),
+        url('Config-Text.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Config';
+    src: url('Config-SemiBold.eot');
+    src: local('Config SemiBold'), local('Config-SemiBold'),
+        url('Config-SemiBold.eot?#iefix') format('embedded-opentype'),
+        url('Config-SemiBold.woff2') format('woff2'),
+        url('Config-SemiBold.woff') format('woff'),
+        url('Config-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Config';
+    src: url('Config-ThinItalic.eot');
+    src: local('Config Thin Italic'), local('Config-ThinItalic'),
+        url('Config-ThinItalic.eot?#iefix') format('embedded-opentype'),
+        url('Config-ThinItalic.woff2') format('woff2'),
+        url('Config-ThinItalic.woff') format('woff'),
+        url('Config-ThinItalic.ttf') format('truetype');
+    font-weight: 100;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Config';
+    src: url('Config-SemiBoldItalic.eot');
+    src: local('Config SemiBold Italic'), local('Config-SemiBoldItalic'),
+        url('Config-SemiBoldItalic.eot?#iefix') format('embedded-opentype'),
+        url('Config-SemiBoldItalic.woff2') format('woff2'),
+        url('Config-SemiBoldItalic.woff') format('woff'),
+        url('Config-SemiBoldItalic.ttf') format('truetype');
+    font-weight: 600;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Config';
+    src: url('Config-MediumItalic.eot');
+    src: local('Config Medium Italic'), local('Config-MediumItalic'),
+        url('Config-MediumItalic.eot?#iefix') format('embedded-opentype'),
+        url('Config-MediumItalic.woff2') format('woff2'),
+        url('Config-MediumItalic.woff') format('woff'),
+        url('Config-MediumItalic.ttf') format('truetype');
+    font-weight: 500;
+    font-style: italic;
+}
+
