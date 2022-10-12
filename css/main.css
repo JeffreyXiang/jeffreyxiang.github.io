@@ -194,7 +194,7 @@ a:focus, a:hover {
     width: 1000px;
     margin: 25px 0px;
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
 }
 
