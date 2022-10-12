@@ -67,7 +67,7 @@ a:focus, a:hover {
 
 #profile_name_en {
     font-size: 36px;
-    font-weight: 100;
+    font-weight: 200;
 }
 
 #profile_name_en::before {
@@ -75,12 +75,12 @@ a:focus, a:hover {
     margin-right: 5px;
     color: gray;
     font-size: 16px;
-    font-weight: 100;
+    font-weight: 200;
 }
 
 #profile_name_zh {
     font-size: 36px;
-    font-weight: 100;
+    font-weight: 200;
 }
 
 #profile_name_zh::before {
@@ -88,19 +88,19 @@ a:focus, a:hover {
     margin-right: 5px;
     color: gray;
     font-size: 16px;
-    font-weight: 100;
+    font-weight: 200;
 }
 
 #profile_name_web {
     margin-top: 5px;
     margin-left: 32px;
     font-size: 16px;
-    font-weight: 100;
+    font-weight: 200;
 }
 
 #profile_info {
     font-size: 16px;
-    font-weight: 100;
+    font-weight: 200;
 }
 
 #profile_info img {
