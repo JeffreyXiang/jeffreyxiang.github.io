@@ -28,10 +28,11 @@ title: Jianfeng Xiang | Publications
 
 <script type="text/javascript">
     window.onload = function(){
-        for (let text in document.getElementsByClassName('publication_item_text')) {
-            let title_height = text.children[0].offsetHeight;
+        let texts = document.getElementsByClassName('publication_item_text');
+        for (let i = 0; i < texts.length(); i++) {
+            let title_height = texts[i].children[0].offsetHeight;
             let margin = (title_height -4) % 20 + 10;
-            text.children[4].style.marginTop = margin;
+            texts[i].children[4].style.marginTop = margin;
         }
     };
 </script>
