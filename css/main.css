@@ -229,8 +229,9 @@ a:focus, a:hover {
 }
 
 .publication_item_title {
-    font-size: 20px;
+    font-size: 24px;
     font-weight: 400;
+    margin-bottom: 3px;
 }
 
 .publication_item_authors {
@@ -240,7 +241,7 @@ a:focus, a:hover {
 
 .publication_item_authors span.me {
     font-size: 16px;
-    font-weight: 400;
+    font-weight: 500;
 }
 
 .publication_item_location {
@@ -261,10 +262,23 @@ a:focus, a:hover {
     width: 100%;
     font-size: 16px;
     font-weight: 300;
-    margin-top: 10px;
+    margin-top: 16px;
+    text-align: justify;
     overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
+}
+
+.publication_item_abstract::before {
+    content: "Abstract:";
+    font-weight: 500;
+    margin-right: 8px;
+}
+
+.publication_item_abstract::after {
+    content: "...";
+    position: absolute;
+    bottom: 2px;
+    right: 0px;
+    background: #fff;
 }
 
 .publication_item_abstract .publication_item_abstract_full {
