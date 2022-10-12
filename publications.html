@@ -10,9 +10,9 @@ title: Jianfeng Xiang | Publications
         <div class="publication_item">
             <div class="publication_item_teaser">
                 {% if publication.teaser_type == "video" %}
-                    <video autoplay loop muted src="{{ publication.teaser }}"></video>
+                    <video width="200px" autoplay loop muted src="{{ publication.teaser }}"></video>
                 {% elsif publication.teaser_type == "image" %}
-                    <img src="{{ publication.teaser }}">
+                    <img width="200px" src="{{ publication.teaser }}">
                 {% endif %}
             </div>
             <div class="publication_item_text">
