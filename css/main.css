@@ -195,7 +195,7 @@ a:focus, a:hover {
     margin: 25px 0px;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
 }
 
 .publication_item_teaser {
@@ -208,7 +208,6 @@ a:focus, a:hover {
 
 .publication_item_text {
     position: relative;
-    height: 200px;
     width: 800px;
     margin-left: 25px;
     padding-left: 16px;
@@ -263,6 +262,7 @@ a:focus, a:hover {
     font-size: 16px;
     font-weight: 300;
     margin-top: 16px;
+    margin-bottom: 2px;
     text-align: justify;
     overflow: hidden;
 }
@@ -273,7 +273,7 @@ a:focus, a:hover {
     margin-right: 8px;
 }
 
-.publication_item_abstract::after {
+/* .publication_item_abstract::after {
     content: "...";
     position: absolute;
     bottom: 2px;
@@ -291,4 +291,4 @@ a:focus, a:hover {
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
-} 
+}  */
