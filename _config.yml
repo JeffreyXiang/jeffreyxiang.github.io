@@ -10,7 +10,15 @@ sass:
   sass_dir: _sass
 collections:
   posts:
-    output          : true
+    output: true
+  projects:
+    output: true
+  publications:
+    output: false
+    order:
+      - gram-hd.md
+      - gram.md
+
 
 # Handling Reading
 safe                : false

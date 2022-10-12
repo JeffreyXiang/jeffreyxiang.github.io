@@ -181,3 +181,99 @@ a:focus, a:hover {
     content: "Zhihu";
     background-color: #056DE8;    
 }
+
+#publication_list {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.publication_item {
+    width: 1000px;
+    margin: 25px 0px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.publication_item_teaser {
+    width: 200px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.publication_item_text {
+    position: relative;
+    height: 200px;
+    width: 600px;
+    margin-left: 25px;
+    padding-left: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.publication_item_text::before {
+    content: "";
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 3px;
+    height: 100%;
+    background-color: rgb(32, 163, 196);
+}
+
+.publication_item_title {
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.publication_item_authors {
+    font-size: 16px;
+    font-weight: 300;
+}
+
+.publication_item_authors span.me {
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.publication_item_location {
+    font-size: 16px;
+    font-weight: 300;
+    font-style: italic;
+}
+
+.publication_item_links {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.publication_item_abstract {
+    position: relative;
+    font-size: 16px;
+    font-weight: 300;
+    margin-top: 10px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.publication_item_abstract .publication_item_abstract_full {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    font-size: 16px;
+    font-weight: 300;
+    margin-top: 10px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+} 

@@ -4,3 +4,24 @@ title: Jianfeng Xiang | Publications
 ---
 
 <div class="title">PUBLICATIONS</div>
+
+<div class="publication_list">
+    {% for publication in site.publications %}
+        <div class="publication_item">
+            <div class="publication_item_teaser">
+                {% if publication.teaser_type == "video" %}
+                    <video autoplay loop muted src="{{ publication.teaser }}"></video>
+                {% elsif publication.teaser_type == "image" %}
+                    <img src="{{ publication.teaser }}">
+                {% endif %}
+            </div>
+            <div class="publication_item_text">
+                <div class="publication_item_title">{{ publication.title }}</div>
+                <div class="publication_item_authors">{{ publication.authors }}</div>
+                <div class="publication_item_location">{{ publication.location }}</div>
+                <div class="publication_item_links"><a target="_blank" href="{{ publication.page_url }}">Link</a></div>
+                <div class="publication_item_abstract">{{ publication.abstract }}</div>
+            </div>
+        </div>
+    {% endfor %}
+</div>
