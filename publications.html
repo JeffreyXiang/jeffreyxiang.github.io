@@ -31,7 +31,7 @@ title: Jianfeng Xiang | Publications
         let texts = document.getElementsByClassName('publication_item_text');
         for (let i = 0; i < texts.length; i++) {
             let title_height = texts[i].children[0].offsetHeight;
-            let margin = (title_height -4) % 20 + 10;
+            let margin = (264 - title_height) % 20 + 10;
             texts[i].children[4].style.marginTop = margin;
         }
     };
