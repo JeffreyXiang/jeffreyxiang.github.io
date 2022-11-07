@@ -1,5 +1,5 @@
 ---
 name: Submit Jobs GUI
-icon: "icons/icon-subjit-jobs-gui.svg"
-url: "https://github.com/JeffreyXiang/Submit-Jobs-GUI"
+icon: "icons/icon-submit-jobs-gui.svg"
+link: "https://github.com/JeffreyXiang/Submit-Jobs-GUI"
 ---
