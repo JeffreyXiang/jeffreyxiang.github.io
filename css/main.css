@@ -308,6 +308,7 @@ a:focus, a:hover {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    box-shadow: 0px 0px 5px 2.5px rgba(0, 0, 0, 0.1);
 }
 
 .tool_item::before {
@@ -324,7 +325,7 @@ a:focus, a:hover {
 }
 
 .tool_item:hover::before {
-    width: 2px;
+    width: 3px;
 }
 
 .tool_item_icon img {
@@ -333,6 +334,9 @@ a:focus, a:hover {
 }
 
 .tool_item_name {
+    width: 150px;
+    height: 40px;
+    text-align: center;
     color: black;
     font-size: 16px;
     font-weight: 400;
