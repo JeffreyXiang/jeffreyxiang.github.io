@@ -134,7 +134,11 @@ a:focus, a:hover {
     position: relative;
     width: 36px;
     height: 36px;
-    cursor: pointer;
+}
+
+#profile_links img {
+    width: 36px;
+    height: 36px;
 }
 
 #profile_links div::after {
