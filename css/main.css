@@ -136,11 +136,6 @@ a:focus, a:hover {
     height: 36px;
 }
 
-#profile_links img {
-    width: 36px;
-    height: 36px;
-}
-
 #profile_links div::after {
     position: absolute;
     left: -18px;
@@ -295,3 +290,51 @@ a:focus, a:hover {
     white-space: nowrap;
     text-overflow: ellipsis;
 }  */
+
+.tool_list {
+    width: 1000px;
+    margin: 25px auto;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.tool_item {
+    position: relative;
+    width: 180px;
+    height: 180px;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.tool_item::before {
+    content: "";
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 0px;
+    height: 100%;
+    background-color: rgb(32, 163, 196);
+    transition-duration: 0.25s;
+    transition-property: width;
+    transition-timing-function: ease;
+}
+
+.tool_item:hover::before {
+    width: 2px;
+}
+
+.tool_item_icon img {
+    width: 120px;
+    height: 120px;
+}
+
+.tool_item_name {
+    color: black;
+    font-size: 24px;
+    font-weight: 200;
+}
+

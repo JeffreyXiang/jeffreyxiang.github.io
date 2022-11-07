@@ -4,3 +4,14 @@ title: Jianfeng Xiang | Tools
 ---
 
 <div class="title">TOOLS</div>
+
+<div class="tool_list">
+    {% for tool in site.tools %}
+        <a href="{{ tool.url }}"><div class="tool_item">
+            <div class="tool_item_icon">
+                <img src="{{ tool.icon }}">
+            </div>
+            <div class="tool_item_name">{{ tool.name }}</div>
+        </div></a>
+    {% endfor %}
+</div>
