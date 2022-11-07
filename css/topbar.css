@@ -50,6 +50,10 @@
     cursor: pointer;
 }
 
+.topbar_button:hover {
+    color: gray;
+}
+
 .topbar_button::before {
     content: "";
     position: relative;

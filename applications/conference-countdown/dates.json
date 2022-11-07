@@ -1,0 +1,46 @@
+[
+    {
+        "name": "CVPR2022",
+        "link": "https://cvpr2022.thecvf.com/",
+        "dates": {
+            "Registration": "2021-11-09T23:59:00-08:00",
+            "Paper": "2021-11-18T11:59:00-08:00",
+            "Supplmat": "2021-11-24T09:59:00-08:00"
+        }
+    },
+    {
+        "name": "NIPS2022",
+        "link": "https://neurips.cc/Conferences/2022",
+        "dates": {
+            "Abstract": "2022-05-16T13:00:00-07:00",
+            "Paper": "2022-05-19T13:00:00-07:00",
+            "Supplmat": "2022-05-26T13:00:00-07:00"
+        }
+    },
+    {
+        "name": "CVPR2023",
+        "link": "https://cvpr.thecvf.com/Conferences/2023",
+        "dates": {
+            "Registration": "2022-11-4T23:59:00-07:00",
+            "Paper": "2022-11-11T23:59:00-08:00",
+            "Supplmat": "2022-11-18T23:59:00-08:00"
+        }
+    },
+    {
+        "name": "SIGGRAPH2023",
+        "link": "https://s2023.siggraph.org/",
+        "dates": {
+            "Form & Conflicts": "2023-01-24T22:00:00+00:00",
+            "Paper": "2023-01-25T22:00:00+00:00",
+            "Upload": "2023-01-26T22:00:00+00:00"
+        }
+    },
+    {
+        "name": "ICCV2023",
+        "link": "https://iccv2023.thecvf.com/",
+        "dates": {
+            "Paper": "2023-03-08T23:59:00+00:00",
+            "Supplmat": "2023-03-15T23:59:00+00:00"
+        }
+    }
+]
