@@ -21,8 +21,8 @@ collections:
   tools:
     output: false
     order:
-      - submit_jobs_gui.md
-      - conference_countdown.md
+      - submit-jobs-gui.md
+      - conference-countdown.md
 
 
 # Handling Reading
