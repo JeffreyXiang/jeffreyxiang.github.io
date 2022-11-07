@@ -1,29 +1,43 @@
 ---
 layout: default
 title: Jianfeng Xiang | Applications | Conference Countdown
-permalink: /:path/
+permalink: /applications/conference-countdown
 ---
 
-<div class="publication_list">
-    {% for publication in site.publications %}
-        <div class="publication_item">
-            <div class="publication_item_teaser">
-                {% if publication.teaser_type == "video" %}
-                    <video width="200px" autoplay loop muted src="{{ publication.teaser }}"></video>
-                {% elsif publication.teaser_type == "image" %}
-                    <img width="200px" src="{{ publication.teaser }}">
-                {% endif %}
+<link rel="stylesheet" href="/applications/conference-countdown/main.css">
+<script src="/js/jquery-3.6.1.min.js"></script>
+<script src="/applications/conference-countdown/main.js"></script>
+
+<div class="conference_list">
+    <div class="conference_card">
+        <a class="conference_name" href="{link}">{ConferenceName}</a>
+        <div class="conference_time">
+            <div class="conference_time_remain">
+                <div class="conference_time_remain_phase">
+                    <span class="conference_time_remain_week">
+                        {Weeks}
+                    </span>
+                    <span class="conference_time_remain_unit">Weeks</span>
+                    <span class="conference_time_remain_day">
+                        {Days}
+                    </span>
+                    <span class="conference_time_remain_unit">Days</span>
+                    <span class="conference_time_remain_hour">
+                        {Hours}
+                    </span>
+                    <span class="conference_time_remain_unit">Hours</span>
+                </div>
             </div>
-            <div class="publication_item_text">
-                <div class="publication_item_title">{{ publication.title }}</div>
-                <div class="publication_item_authors">{{ publication.authors }}</div>
-                <div class="publication_item_location">{{ publication.location }}</div>
-                <div class="publication_item_links"><a target="_blank" href="{{ publication.page_url }}">Link</a></div>
-                <div class="publication_item_abstract">{{ publication.abstract }}</div>
+            <div class="conference_time_progress">
+                <div class="conference_time_progress_marker" style="left:{progress}"></div>
+                <div class="conference_time_progress_phase" style="background-color:{color}"></div>
+            </div>
+            <div class="conference_time_absolute">
+                <div class="conference_time_absolute_phase">
+                    <div>{PhaseAbsTime}</div>
+                    <div class="conference_time_absolute_phasename">{PhaseName}</div>
+                </div>
             </div>
         </div>
-    {% endfor %}
+    </div>
 </div>
-
-<script src="/js/jquery-3.6.1.min.js"></script>
-<script src="./main.js"></script>
