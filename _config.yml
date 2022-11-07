@@ -18,6 +18,11 @@ collections:
     order:
       - gram-hd.md
       - gram.md
+  tools:
+    output: false
+    order:
+      - submit_jobs_gui.md
+      - conference_countdown.md
 
 
 # Handling Reading
