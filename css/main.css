@@ -291,7 +291,7 @@ a:focus, a:hover {
     text-overflow: ellipsis;
 }  */
 
-.tool_list {
+.application_list {
     width: 1000px;
     margin: 25px auto;
     display: flex;
@@ -299,7 +299,7 @@ a:focus, a:hover {
     align-items: flex-start;
 }
 
-.tool_item {
+.application_item {
     position: relative;
     width: 180px;
     height: 180px;
@@ -311,7 +311,7 @@ a:focus, a:hover {
     box-shadow: 0px 0px 5px 2.5px rgba(0, 0, 0, 0.1);
 }
 
-.tool_item::before {
+.application_item::before {
     content: "";
     position: absolute;
     left: 0px;
@@ -319,21 +319,21 @@ a:focus, a:hover {
     width: 0px;
     height: 100%;
     background-color: rgb(32, 163, 196);
-    transition-duration: 0.25s;
+    transition-duration: 0.1s;
     transition-property: width;
     transition-timing-function: ease;
 }
 
-.tool_item:hover::before {
-    width: 3px;
+.application_item:hover::before {
+    width: 5px;
 }
 
-.tool_item_icon img {
+.application_item_icon img {
     width: 120px;
     height: 120px;
 }
 
-.tool_item_name {
+.application_item_name {
     width: 150px;
     height: 40px;
     text-align: center;

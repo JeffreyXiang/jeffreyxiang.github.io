@@ -18,7 +18,7 @@ collections:
     order:
       - gram-hd.md
       - gram.md
-  tools:
+  applications:
     output: false
     order:
       - submit-jobs-gui.md
