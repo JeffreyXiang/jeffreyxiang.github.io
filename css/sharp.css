@@ -35,7 +35,7 @@ a:focus, a:hover {
     left: 0px;
     height: 50px;
     width: 100%;
-    box-shadow: 2px 2px 0px 0px rgb(224, 224, 224);
+    box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.1);
     background-color: white;
     display: flex;
     align-items: center;
@@ -83,7 +83,6 @@ a:focus, a:hover {
 
 .topbar_button:hover {
     color: gray;
-    text-shadow: 2px 2px 0px rgb(224, 224, 224);
 }
 
 .topbar_button::before {
@@ -93,7 +92,6 @@ a:focus, a:hover {
     top: 0px;
     width: 2px;
     height: 0%;
-    box-shadow: 2px 2px 0px 0px rgb(224, 224, 224);
     background-color: rgb(32, 163, 196);
     transition-duration: 0.25s;
     transition-property: height;
