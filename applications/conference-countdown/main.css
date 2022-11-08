@@ -9,19 +9,21 @@
 .conference_card {
     width: 1000px;
     height: 100px;
-    margin: 25px 0px;
+    margin: 10px 0px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .conference_name {
-    width: 200px;
+    width: 150px;
     height: 100%;
-    font-size: 36px;
-    font-weight: 400;
+    font-size: 30px;
+    font-weight: 900;
+    color: gray;
     text-align: center;
     word-break:break-all;
+    text-shadow: 2px 2px 0px rgb(224, 224, 224);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -32,11 +34,13 @@
     width: 800px;
     height: 100%;
     margin-left: 10px;
-    padding-left: 10px;
+    padding: 0px 10px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    box-shadow: 2px 2px 0px 0px rgb(224, 224, 224);
+    background-color: rgb(248, 248, 248);
 }
 
 .conference_time::before {
@@ -75,7 +79,7 @@
 .conference_time_progress {
     position: relative;
     width: 100%;
-    height: 20px;
+    height: 2px;
     flex: 0 0 auto;
     display: flex;
     justify-content: center;
@@ -89,9 +93,9 @@
 
 .conference_time_progress_marker {
     position: absolute;
-    top: 2px;
+    top: -6px;
     width: 0px;
-    height: 6px;
+    height: 4px;
     margin-left: -3px;
     border-top: 5px solid gray;
     border-bottom: 5px solid gray;
