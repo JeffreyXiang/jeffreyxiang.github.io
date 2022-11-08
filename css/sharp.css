@@ -22,10 +22,86 @@ a:focus, a:hover {
     margin: 32px;
     color: gray;
     font-size: 64px;
-    font-weight: 100;
+    font-weight: 900;
     display: flex;
     align-items: center;
     justify-content: center;
+    text-shadow: 2px 2px 0px rgb(224, 224, 224);
+}
+
+#topbar {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    height: 50px;
+    width: 100%;
+    box-shadow: 2px 2px 0px 0px rgb(224, 224, 224);
+    background-color: white;
+    display: flex;
+    align-items: center;
+    user-select: none;
+    z-index: 99;
+}
+
+#topbar::before {
+    content: "";
+    position: relative;
+    left: 0px;
+    top: 0px;
+    width: 3px;
+    height: 100%;
+    background-color: rgb(32, 163, 196);
+}
+
+#topbar_title {
+    height: 50px;
+    color: black;
+    font-size: 24px;
+    font-weight: 200;
+    padding: 0 16px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+#topbar_spacer {
+    flex-grow: 1;
+}
+
+.topbar_button {
+    height: 25px;
+    color: gray;
+    font-size: 16px;
+    font-weight: 200;
+    margin: 0 16px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.topbar_button:hover {
+    color: gray;
+    text-shadow: 2px 2px 0px rgb(224, 224, 224);
+}
+
+.topbar_button::before {
+    content: "";
+    position: relative;
+    left: -8px;
+    top: 0px;
+    width: 2px;
+    height: 0%;
+    box-shadow: 2px 2px 0px 0px rgb(224, 224, 224);
+    background-color: rgb(32, 163, 196);
+    transition-duration: 0.25s;
+    transition-property: height;
+    transition-timing-function: ease;
+}
+
+.topbar_button:hover::before {
+    height: 96%;
 }
 
 #profile {
@@ -38,20 +114,23 @@ a:focus, a:hover {
 }
 
 #profile_photo {
-    height: 400px;
-    width: 400px;
+    height: 432px;
+    width: 432px;
     margin: 10px 15px;
+    box-shadow: 2px 2px 0px 0px rgb(224, 224, 224);
 }
 
 #profile_card {
     position: relative;
     height: 400px;
     margin: 10px 15px;
-    padding-left: 16px;
+    padding: 16px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: flex-start;
+    box-shadow: 2px 2px 0px 0px rgb(224, 224, 224);
+    background-color: rgb(248, 248, 248);
 }
 
 #profile_card::before {
@@ -116,9 +195,12 @@ a:focus, a:hover {
 #profile_intro {
     width: 800px;
     margin: 10px auto 25px;
+    padding: 0px 16px;
     font-size: 16px;
     font-weight: 400;
     text-align: justify;
+    box-shadow: 2px 2px 0px 0px rgb(224, 224, 224);
+    background-color: rgb(248, 248, 248);
 }
 
 #profile_links {
@@ -202,17 +284,20 @@ a:focus, a:hover {
     display: flex;
     justify-content: center;
     align-items: center;
+    box-shadow: 2px 2px 0px 0px rgb(224, 224, 224);
 }
 
 .publication_item_text {
     position: relative;
     width: 800px;
     margin-left: 25px;
-    padding-left: 16px;
+    padding: 8px 16px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
+    box-shadow: 2px 2px 0px 0px rgb(224, 224, 224);
+    background-color: rgb(248, 248, 248);
 }
 
 .publication_item_text::before {
@@ -308,7 +393,8 @@ a:focus, a:hover {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    box-shadow: 0px 0px 5px 2.5px rgba(0, 0, 0, 0.1);
+    box-shadow: 2px 2px 0px 0px rgb(224, 224, 224);
+    background-color: rgb(248, 248, 248);
 }
 
 .application_item::before {
