@@ -14,13 +14,16 @@ a:focus, a:hover {
 }
 
 body {
-    height: 100%;
+    position: relative;
     margin: 0px;
+    padding: 0px;
 }
 
 #main {
     width: 1000px;
-    margin: 100px auto 200px;
+    margin: 0px auto;
+    padding-top: 50px;
+    padding-bottom: 200px;
 }
 
 .title {
