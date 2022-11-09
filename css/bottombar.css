@@ -1,8 +1,8 @@
-#bottom_bar {
+#bottombar {
     height: 50px;
     width: 800px;
-    padding: 0px calc(50%-400px);
-    background-color: rgb(36, 51, 65);
+    padding: 0px calc(50% - 400px);
+    background-color: rgb(32, 163, 196);
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -10,7 +10,7 @@
 }
 
 #bottombar_copyright {
-    color: darkgray;
+    color: rgb(220, 241, 247);
     font-size: 12px;
     font-weight: 400;
 }
@@ -20,9 +20,11 @@
 }
 
 #bottombar_contact {
-    color: darkgray;
+    color: rgb(220, 241, 247);;
     font-size: 12px;
     font-weight: 400;
+    display: flex;
+    align-items: center;
 }
 
 #bottombar_contact::before {
@@ -30,23 +32,23 @@
 }
 
 .bottombar_contact_icon {
-    height: 16px;
-    width: 16px;
-    color: darkgray;
+    font-size: 20px;
+    color: rgb(220, 241, 247);
+    margin-left: 10px
 }
 
-.icon-logo-bilibili:before:hover {
+.icon-logo-bilibili:hover {
     color: #fb7299;
 }
 
-.icon-logo-email:before:hover {
+.icon-logo-email:hover {
     color: #5c7b37;
 }
 
-.icon-logo-github:before:hover {
-    color: #ffffff
+.icon-logo-github:hover {
+    color: #24292f
 }
 
-.icon-logo-zhihu:before:hover {
+.icon-logo-zhihu:hover {
     color: #056de8;
 }
