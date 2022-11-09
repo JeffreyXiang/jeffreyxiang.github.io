@@ -4,7 +4,10 @@
         <title>{{ page.title }}</title>
         <link rel="icon" href="/favicon.png">
         <link rel="stylesheet" href="/fonts/stylesheet.css">
-        <!-- <link rel="stylesheet" href="/css/default.css"> -->
+        <link rel="stylesheet" href="/icons/style.css">
+        <link rel="stylesheet" href="/css/topbar.css">
+        <link rel="stylesheet" href="/css/bottombar.css">
+        <link rel="stylesheet" href="/css/default.css">
         <link rel="stylesheet" href="/css/sharp.css">
     </head>
     <body>
@@ -12,5 +15,6 @@
         <div id="main">
             {{ content }}
         </div>
+        {% include bottombar.html %}
     </body>
 </html>
