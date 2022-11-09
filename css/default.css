@@ -118,9 +118,10 @@ a:focus, a:hover {
 
 #profile_card {
     position: relative;
-    height: 400px;
+    height: 392px;
     margin: 10px 15px;
     padding-left: 16px;
+    padding-bottom: 8px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -194,22 +195,39 @@ a:focus, a:hover {
     text-align: justify;
 }
 
-#profile_links {
-    height: 36px;
+#profile_link {
     width: 100%;
-    margin-bottom: 16px;
+    margin: 16px 0px;
+    font-weight: 700;
     display: flex;
-    justify-content: space-around;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
 }
 
-#profile_links div {
+#profile_link::before {
+    content: "L I N K S";
+    margin-bottom: 16px;
+    color: gray;
+    font-size: 16px;
+}
+
+#profile_link_icons {
+    height: 36px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#profile_link_icons div {
     position: relative;
     width: 36px;
     height: 36px;
+    margin: 0px 8px;
 }
 
-#profile_links div::after {
+#profile_link_icons div::after {
     position: absolute;
     left: -18px;
     top: 40px;
@@ -227,28 +245,28 @@ a:focus, a:hover {
     transition-timing-function: ease;
 }
 
-#profile_links div:hover::after {
+#profile_link_icons div:hover::after {
     opacity: 1;
 }
 
-#profile_links_github::after {
+#profile_link_github::after {
     content: "Github";
     background-color: #24292f;
 }
 
-#profile_links_email::after {
+#profile_link_email::after {
     left: -36px !important;
     width: 108px !important;
     content: "Personal email";
     background-color: #5c7b37;    
 }
 
-#profile_links_bilibili::after {
+#profile_link_bilibili::after {
     content: "Bilibili";
     background-color: #fb7299;    
 }
 
-#profile_links_zhihu::after {
+#profile_link_zhihu::after {
     content: "Zhihu";
     background-color: #056DE8;    
 }
