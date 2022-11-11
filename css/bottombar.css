@@ -14,7 +14,7 @@
 #bottombar_copyright {
     color: rgb(220, 241, 247);
     font-size: 12px;
-    font-weight: 400;
+    font-weight: 500;
 }
 
 #bottombar_copyright span {
@@ -24,7 +24,7 @@
 #bottombar_contact {
     color: rgb(220, 241, 247);;
     font-size: 12px;
-    font-weight: 400;
+    font-weight: 500;
     display: flex;
     align-items: center;
 }
