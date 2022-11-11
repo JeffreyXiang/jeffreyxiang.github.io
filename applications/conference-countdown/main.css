@@ -23,7 +23,7 @@
     font-weight: 900;
     color: gray;
     text-align: center;
-    word-break:break-all;
+    word-break: keep-all;
     text-shadow: 2px 2px 0px rgb(224, 224, 224);
     display: flex;
     justify-content: center;
