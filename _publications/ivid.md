@@ -1,5 +1,5 @@
 ---
-id: "ivid"
+id: ivid
 title: "3D-aware Image Generation using 2D Diffusion Models"
 authors: "<span class='me'>Jianfeng Xiang</span>, Jiaolong Yang, Binbin Huang, Xin Tong"
 location: "arXiv 2023"
