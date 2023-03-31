@@ -7,6 +7,7 @@ title: Jianfeng Xiang | Publications
 
 <div class="publication_list">
     {% for id in site.publication_order %}
+    <div>{{ id }}</div>
         {% for publication in site.publications %}
         <div>{{ publication.id }}</div>
             {% if publication.id == id %}
