@@ -15,16 +15,16 @@ collections:
     output: true
   publications:
     output: false
-    order:
-      - ivid
-      - gram-hd
-      - gram
   applications:
     output: false
-    order:
-      - submit-jobs-gui
-      - conference-countdown
-      - msra-intern-s-toolkit
+publication_order:
+  - ivid
+  - gram-hd
+  - gram
+application_order:
+  - submit-jobs-gui
+  - conference-countdown
+  - msra-intern-s-toolkit
 
 
 # Handling Reading
