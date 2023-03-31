@@ -16,6 +16,7 @@ collections:
   publications:
     output: false
     order:
+      - ivid.md
       - gram-hd.md
       - gram.md
   applications:
