@@ -7,12 +7,15 @@ title: Jianfeng Xiang | Applications
 
 <div class="application_list">
     {% for id in site.application_order %}
-        {% assign application = site.applications | where: "id", id | first %}
-        <a href="{{ application.link }}"><div class="application_item">
-            <div class="application_item_icon">
-                <img src="{{ application.icon }}">
-            </div>
-            <div class="application_item_name">{{ application.name }}</div>
-        </div></a>
+        {% for application in site.applications %}
+            {% if application.id == id %}
+                <a href="{{ application.link }}"><div class="application_item">
+                    <div class="application_item_icon">
+                        <img src="{{ application.icon }}">
+                    </div>
+                    <div class="application_item_name">{{ application.name }}</div>
+                </div></a>
+            {% endif %}
+        {% endfor %
     {% endfor %}
 </div>
