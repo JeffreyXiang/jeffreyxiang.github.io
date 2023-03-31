@@ -6,7 +6,8 @@ title: Jianfeng Xiang | Applications
 <div class="title">APPLICATIONS</div>
 
 <div class="application_list">
-    {% for application in site.applications %}
+    {% for id in site.collections.applications.order %}
+        {% assign application = site.applications | where: "id", id | first %}
         <a href="{{ application.link }}"><div class="application_item">
             <div class="application_item_icon">
                 <img src="{{ application.icon }}">

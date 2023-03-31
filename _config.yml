@@ -16,15 +16,15 @@ collections:
   publications:
     output: false
     order:
-      - ivid.md
-      - gram-hd.md
-      - gram.md
+      - ivid
+      - gram-hd
+      - gram
   applications:
     output: false
     order:
-      - submit-jobs-gui.md
-      - conference-countdown.md
-      - msra-intern-s-toolkit.md
+      - submit-jobs-gui
+      - conference-countdown
+      - msra-intern-s-toolkit
 
 
 # Handling Reading
