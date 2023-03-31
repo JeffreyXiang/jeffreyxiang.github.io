@@ -7,6 +7,7 @@ title: Jianfeng Xiang | Publications
 
 <div class="publication_list">
     {% for id in site.collections.publications.order %}
+        <div>{{ id }}</div>
         {% assign publication = site.publications | where: "id", id | first %}
         <div class="publication_item">
             <div class="publication_item_teaser">
