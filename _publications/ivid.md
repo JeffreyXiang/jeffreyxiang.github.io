@@ -2,7 +2,7 @@
 order_id: ivid
 title: "3D-aware Image Generation using 2D Diffusion Models"
 authors: "<span class='me'>Jianfeng Xiang</span>, Jiaolong Yang, Binbin Huang, Xin Tong"
-location: "arXiv 2023"
+location: "2023 International Conference on Computer Vision, ICCV 2023"
 teaser: "/videos/ivid.mp4"
 teaser_type: "video"
 page_url: "https://jeffreyxiang.github.io/ivid/"

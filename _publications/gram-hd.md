@@ -2,7 +2,7 @@
 order_id: gram-hd
 title: "GRAM-HD: 3D-Consistent Image Generation at High Resolution with Generative Radiance Manifolds"
 authors: "<span class='me'>Jianfeng Xiang</span>, Jiaolong Yang, Yu Deng, Xin Tong"
-location: "arXiv 2022"
+location: "2023 International Conference on Computer Vision, ICCV 2023"
 teaser: "/videos/gram-hd.mp4"
 teaser_type: "video"
 page_url: "https://jeffreyxiang.github.io/GRAM-HD/"

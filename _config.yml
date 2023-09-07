@@ -18,6 +18,7 @@ collections:
   applications:
     output: false
 publication_order:
+  - ani-portrait-gan
   - ivid
   - gram-hd
   - gram
