@@ -18,6 +18,7 @@ collections:
   applications:
     output: false
 publication_order:
+  - diff-3d-edit
   - ani-portrait-gan
   - ivid
   - gram-hd
