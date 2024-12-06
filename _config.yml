@@ -18,6 +18,8 @@ collections:
   applications:
     output: false
 publication_order:
+  - trellis
+  - moge
   - diff-3d-edit
   - ani-portrait-gan
   - ivid
