@@ -2,7 +2,7 @@
 order_id: trellis
 title: "Structured 3D Latents for Scalable and Versatile 3D Generation"
 authors: "<span class='me'>Jianfeng Xiang</span>, Zelong Lv, Sicheng Xu, Yu Deng, Ruicheng Wang, Bowen Zhang, Dong Chen, Xin Tong, Jiaolong Yang"
-location: "arXiv 2024"
+location: "2025 IEEE Conference on Computer Vision and Pattern Recognition, CVPR 2025, Highlight"
 teaser: "/videos/trellis.mp4"
 teaser_type: "video"
 page_url: "https://trellis3d.github.io"
