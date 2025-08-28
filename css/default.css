@@ -1,8 +1,3 @@
-
-* {
-    font-family: 'Avenir', 'Avenir Next Cyr', 'Config', 'Microsoft YaHei';
-}
-
 a {
     color: #1772d0;
     text-decoration: none;
@@ -14,6 +9,7 @@ a:focus, a:hover {
 }
 
 body {
+    font-family: 'Avenir', 'Avenir Next Cyr', 'Config', 'Microsoft YaHei';
     position: relative;
     margin: 0px;
     padding: 0px;
@@ -286,7 +282,7 @@ body {
     font-size: 16px;
     font-weight: 400;
     margin-top: 16px;
-    margin-bottom: 2px;
+    margin-bottom: 5px;
     text-align: justify;
     overflow: hidden;
 }
@@ -316,6 +312,61 @@ body {
     white-space: nowrap;
     text-overflow: ellipsis;
 }  */
+
+.blog_list {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.blog_item {
+    position: relative;
+    width: 800px;
+    margin: 16px 0px;
+    margin-left: 25px;
+    padding-left: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.blog_item::before {
+    content: "";
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 3px;
+    height: 100%;
+    background-color: rgb(32, 163, 196);
+}
+
+.blog_item_title {
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+.blog_item_title a {
+    color: black;
+}
+
+.blog_item_title a:hover {
+    text-decoration: underline;
+}
+
+.blog_item_date {
+    font-size: 14px;
+    color: #656565;
+    margin-bottom: 15px;
+}
+
+.blog_item_excerpt {
+    text-align: justify;
+    margin-bottom: 5px;
+}
 
 .application_list {
     width: 1000px;

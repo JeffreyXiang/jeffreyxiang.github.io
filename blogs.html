@@ -4,3 +4,17 @@ title: Jianfeng Xiang | Blogs
 ---
 
 <div class="title">BLOGS</div>
+
+<div class="blog_list">
+    {% for post in site.blogs %}
+        <div class="blog_item">
+            <div class="blog_item_title">
+                <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+            </div>
+            <div class="blog_item_date">{{ post.date | date: "%Y-%m-%d" }}</div>
+            {% if post.excerpt %}
+            <div class="blog_item_excerpt">{{ post.excerpt }}</div>
+            {% endif %}
+        </div>
+    {% endfor %}
+</div>

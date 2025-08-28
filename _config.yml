@@ -9,7 +9,7 @@ includes_dir        : _includes
 sass:
   sass_dir: _sass
 collections:
-  posts:
+  blogs:
     output: true
   projects:
     output: true
@@ -18,6 +18,7 @@ collections:
   applications:
     output: false
 publication_order:
+  - moge-2
   - trellis
   - moge
   - diff-3d-edit
@@ -67,7 +68,7 @@ show_dir_listing    : false
 # Outputting
 permalink           : date
 paginate_path       : /page:num
-timezone            : Asia/Beijing
+timezone            : Asia/Shanghai
 
 quiet               : false
 verbose             : false
