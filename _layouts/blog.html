@@ -68,17 +68,23 @@
                     {{ content }}
                 </div>
 
-                {% if jekyll.environment == 'production' -%}
-                    {% if page.comments == false -%}
-                    <div class="comments-disabled-message">
-                    Comments have been disabled for this post.
-                    </div>
-                    {% else -%}
-                    {%- include comments.html -%}
-                    {% endif -%}
-                {% endif -%}
-
-                <a class="u-url" href="{{ page.url | relative_url }}" hidden></a>
+                <script src="https://giscus.app/client.js"
+                    data-repo="JeffreyXiang/jeffreyxiang.github.io"
+                    data-repo-id="R_kgDOIL4TYQ"
+                    data-category="Comments"
+                    data-category-id="DIC_kwDOIL4TYc4CvTq9"
+                    data-mapping="specific"
+                    data-term="{{ page.blog_id }}"
+                    data-strict="0"
+                    data-reactions-enabled="1"
+                    data-emit-metadata="0"
+                    data-input-position="bottom"
+                    data-theme="light"
+                    data-lang="en"
+                    data-loading="lazy"
+                    crossorigin="anonymous"
+                    async>
+                </script>
             </article>
         </div>
         {% include bottombar.html %}
