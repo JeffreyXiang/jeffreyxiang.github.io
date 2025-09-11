@@ -6,12 +6,36 @@ title: Jianfeng Xiang | Blogs
 <div class="title">BLOGS</div>
 
 <div class="blog_list">
-    {% for post in site.blogs %}
+    {% assign grouped = site.blogs | sort: "date" | reverse | group_by: "blog_id" %}
+    {% for group in grouped %}
+        {% assign posts = group.items %}
+        {% assign en_post = posts | where: "lang", "en" | first %}
+        {% assign zh_post = posts | where: "lang", "zh" | first %}
+        {% if en_post %}
+            {% assign post = en_post %}
+        {% else %}
+            {% assign post = zh_post %}
+        {% endif %}
+
         <div class="blog_item">
             <div class="blog_item_title">
-                <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+                <a href="{{ post.url }}">{{ post.title }}</a>
             </div>
-            <div class="blog_item_date">{{ post.date | date: "%Y-%m-%d" }}</div>
+            <div class="blog_item_info">
+                {{ post.date | date: "%Y-%m-%d" }}
+                &nbsp;&nbsp;
+                [
+                {% if en_post %}
+                    <a href="{{ en_post.url }}">English</a>
+                    {% if zh_post %}
+                    &nbsp;|&nbsp;
+                    <a href="{{ zh_post.url }}">中文</a>
+                    {% endif %}
+                {% else %}
+                    <a href="{{ zh_post.url }}">中文</a>
+                {% endif %}
+                ]
+            </div>
             {% if post.excerpt %}
             <div class="blog_item_excerpt">{{ post.excerpt }}</div>
             {% endif %}

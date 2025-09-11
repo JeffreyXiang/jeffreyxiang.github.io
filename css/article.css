@@ -393,18 +393,6 @@ dl, dd, ol, ul, figure {
     font-weight: 400;
     font-size: 16px;
     line-height: 1.5;
-    font-family: 
-        -apple-system, 
-        system-ui, 
-        BlinkMacSystemFont, 
-        "Segoe UI", 
-        "Segoe UI Emoji", 
-        "Segoe UI Symbol", 
-        "Apple Color Emoji", 
-        Roboto, 
-        Helvetica, 
-        Arial, 
-        sans-serif;
     color: #414141;
     -webkit-text-size-adjust: 100%;
     -webkit-font-feature-settings: "kern" 1;
@@ -445,11 +433,14 @@ img {
  * Figures
  */
 figure > img {
+    width: 100%;
     display: block;
 }
 
 figcaption {
+    color: #656565;
     font-size: 14px;
+    text-align: center;
 }
 
 /**
@@ -479,7 +470,6 @@ blockquote {
     color: #818181;
     border-left: 4px solid #e7e7e7;
     padding-left: 15px;
-    font-size: 1.05rem;
     font-style: italic;
 }
 blockquote > :last-child {
@@ -494,8 +484,8 @@ blockquote i, blockquote em {
  */
 pre,
 code {
-    font-family: "Menlo", "Inconsolata", "Consolas", "Roboto Mono", "Ubuntu Mono", "Liberation Mono", "Courier New", monospace;
-    background-color: #f6f8fa;
+    font-family: "Consolas", "Microsoft Yahei", "Menlo", "Inconsolata", "Roboto Mono", "Ubuntu Mono", "Liberation Mono", "Courier New", monospace;
+    background: #f6f6f6;
 }
 @media screen and (max-width: 600px) {
     pre,
@@ -514,12 +504,9 @@ pre {
 pre > code {
     display: inline-block;
     width: 100%;
+    border-bottom: 2px solid transparent;
 }
 
-div.highlight, figure.highlight {
-    border: 1px solid #e7e7e7;
-    border-radius: 3px;
-}
 div.highlight pre, figure.highlight pre {
     margin: 0;
 }
@@ -543,10 +530,8 @@ figure.highlight td.code {
 }
 
 code.highlighter-rouge {
-    padding: 1px 5px;
+    padding: 2px 5px;
     font-size: 14px;
-    border: 1px solid #e7e7e7;
-    border-radius: 3px;
 }
 
 /**
@@ -640,14 +625,27 @@ table td {
  * Posts
  */
 .post-header {
+    font-family: 'Avenir', 'Avenir Next Cyr', 'Config', 'Microsoft YaHei';
+    margin-top: 50px;
     margin-bottom: 30px;
-    padding-bottom: 18px;
-    text-align: center;
+    padding-bottom: 50px;
     border-bottom: 1px solid #e7e7e7;
+}
+
+.post-teaser {
+    width: 100%;
+    height: 300px;
+}
+
+.post-teaser img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .post-meta {
   font-size: 14px;
+  font-weight: 300;
   color: #656565;
 }
 
@@ -655,7 +653,7 @@ table td {
     padding-inline: 15px;
 }
 .post-meta .meta-label {
-    font-weight: 600;
+    font-weight: 500;
 }
 .post-meta .force-inline {
     display: inline;
@@ -684,8 +682,17 @@ table td {
     }
 }
 
+.post-title {
+    margin-top: 12px;
+    font-weight: 200;
+}
+
 .post-content {
     margin-bottom: 30px;
+    text-align: justify;
+}
+.post-content strong {
+    font-weight: 600;
 }
 .post-content h1, .post-content h2, .post-content h3, .post-content h4, .post-content h5, .post-content h6 {
     margin-top: 30px;

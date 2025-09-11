@@ -42,18 +42,18 @@
     transition-timing-function: ease;
 }
 
-.icon-logo-bilibili:hover {
+.bottombar_contact_icon.icon-logo-bilibili:hover {
     color: #fb7299;
 }
 
-.icon-logo-email:hover {
+.bottombar_contact_icon.icon-logo-email:hover {
     color: #5c7b37;
 }
 
-.icon-logo-github:hover {
+.bottombar_contact_icon.icon-logo-github:hover {
     color: #24292f
 }
 
-.icon-logo-zhihu:hover {
+.bottombar_contact_icon.icon-logo-zhihu:hover {
     color: #056de8;
 }

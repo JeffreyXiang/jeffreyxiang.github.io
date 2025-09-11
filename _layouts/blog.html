@@ -10,38 +10,58 @@
         <link rel="stylesheet" href="/css/default.css">
         <link rel="stylesheet" href="/css/sharp.css">
         <link rel="stylesheet" href="/css/article.css">
+        <script>
+            MathJax = {
+                tex: {
+                    inlineMath: [['$', '$']]
+                }
+            };
+        </script>
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     </head>
     <body>
         {% include topbar.html %}
         <div id="main">
             <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
                 <header class="post-header">
+                    {%- if page.teaser -%}
+                    <div class="post-teaser">
+                        <img src="{{ page.teaser }}" alt="{{ page.title }}">
+                    </div>
+                    {%- endif -%}
                     <h1 class="post-title p-name" itemprop="name headline">{{ page.title | escape }}</h1>
                     <div class="post-meta">
                     {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
                     {% assign pdate = page.date | date_to_xmlschema %}
-                    {%- if page.modified_date %}<span class="meta-label">Published:</span>{% endif %}
+                    <span class="meta-label">Published:</span>&nbsp;
                     <time class="dt-published" datetime="{{ pdate }}" itemprop="datePublished">
                         {{ pdate | date: date_format }}
                     </time>
-                    {%- if page.modified_date -%}
-                        <span class="bullet-divider">•</span>
-                        <span class="meta-label">Updated:</span>
-                        {%- assign mdate = page.modified_date | date_to_xmlschema %}
-                        <time class="dt-modified" datetime="{{ mdate }}" itemprop="dateModified">
-                        {{ mdate | date: date_format }}
-                        </time>
+                    &nbsp;&nbsp;
+                    <span class="meta-label">Languages:</span>&nbsp;&nbsp;
+                    {%- assign en_page = site.blogs | where: "blog_id", page.blog_id | where: "lang", "en" | first -%}
+                    {%- assign zh_page = site.blogs | where: "blog_id", page.blog_id | where: "lang", "zh" | first -%}
+                    {%- if page.lang == 'en' -%}
+                    <span>English</span>
+                    {%- if zh_page -%}
+                    &nbsp;|&nbsp;<a href="{{ page.url | prepend: site.baseurl | replace:'/en/','/zh/' }}">中文</a>
                     {%- endif -%}
-                    {%- if page.author %}
-                    <div class="{% unless page.modified_date %}force-inline {% endunless %}post-authors">
-                        {%- for author in page.author %}
-                        <span itemprop="author" itemscope itemtype="http://schema.org/Person">
-                            <span class="p-author h-card" itemprop="name">{{ author }}</span></span>
-                        {%- if forloop.last == false %}, {% endif -%}
-                        {% endfor %}
-                    </div>
-                    {%- endif %}
-                    </div>
+                    {%- else -%}
+                    {%- if en_page -%}
+                    <a href="{{ page.url | prepend: site.baseurl | replace:'/zh/','/en/' }}">English</a>&nbsp;|&nbsp;
+                    {%- endif -%}
+                    <span>中文</span>
+                    {%- endif -%}
+                    {%- if page.github or page.zhihu -%}
+                    &nbsp;&nbsp;
+                    <span class="meta-label">Links:</span>&ensp;
+                    {%- if page.github -%}
+                    <a class="icon-logo-github" href="{{ page.github }}" target="_blank"></a>
+                    {%- endif -%}
+                    {%- if page.zhihu -%}
+                    &nbsp;<a class="icon-logo-zhihu" href="{{ page.zhihu }}" target="_blank"></a>
+                    {%- endif -%}
+                    {%- endif -%}
                 </header>
 
                 <div class="post-content e-content" itemprop="articleBody">
