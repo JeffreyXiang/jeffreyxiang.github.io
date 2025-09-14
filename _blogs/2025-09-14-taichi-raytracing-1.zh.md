@@ -8,7 +8,7 @@ permalink: /zh/blogs/taichi-raytracing-1
 teaser: /imgs/taichi-raytracing-1/teaser.jpg
 lang: zh
 github: https://github.com/JeffreyXiang/learn_path_tracing
-zhihu: https://zhuanlan.zhihu.com/p/389288227
+zhihu: https://zhuanlan.zhihu.com/p/1950610811962782348
 ---
 
 <script
