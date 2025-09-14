@@ -389,7 +389,7 @@ dl, dd, ol, ul, figure {
  * Basic styling
  */
 #main {
-    width: 800px;
+    width: 1000px;
     font-weight: 400;
     font-size: 16px;
     line-height: 1.5;
@@ -401,9 +401,10 @@ dl, dd, ol, ul, figure {
     font-feature-settings: "kern" 1;
     font-kerning: normal;
     display: flex;
-    flex-direction: column;
-    overflow-wrap: break-word;
+    flex-direction: row;
+    gap: 80px;
 }
+
 
 /**
  * Set `margin-bottom` to maintain vertical rhythm
@@ -434,6 +435,7 @@ img {
  */
 figure > img {
     width: 100%;
+    margin: 0 auto;
     display: block;
 }
 
@@ -688,7 +690,7 @@ table td {
 }
 
 .post-content {
-    margin-bottom: 30px;
+    margin-bottom: 100px;
     text-align: justify;
 }
 .post-content strong {

@@ -1,0 +1,54 @@
+/* ====== TOC ====== */
+.toc-container {
+    position: sticky;
+    top: 100px;
+}
+
+.toc {
+    max-height: 75vh;
+    overflow-y: auto;
+    font-size: 0.9rem;
+    font-weight: 500;
+    padding-right: 16px;
+}
+
+.toc-title {
+    font-weight: 200;
+    margin-bottom: 8px;
+    font-size: 2rem;
+    color: #333;
+    border-bottom: 1px solid #e7e7e7;
+}
+ 
+.toc ul,
+.toc ol {
+    margin: 0;
+    list-style-type: none;
+}
+  
+.toc li {
+    margin: 4px 0;
+}
+  
+.toc a {
+    color: #444;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+  
+.toc a:hover {
+    text-decoration: underline;
+}
+  
+.toc ul ul {
+    margin-left: 4px;
+    padding-left: 15px;
+    border-left: 1px solid #ddd;
+    margin-top: 4px;
+    margin-bottom: 4px;
+}
+  
+.toc a.active {
+    font-weight: bold;
+    color: rgb(32, 163, 196);
+}

@@ -1,7 +1,7 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
-        <title>{{ page.title }}</title>
+        <title>Jianfeng Xiang | Blogs | {{ page.title }}</title>
         <link rel="icon" href="/favicon.png">
         <link rel="stylesheet" href="/fonts/avenir-next/stylesheet.css">
         <link rel="stylesheet" href="/icons/style.css">
@@ -10,6 +10,9 @@
         <link rel="stylesheet" href="/css/default.css">
         <link rel="stylesheet" href="/css/sharp.css">
         <link rel="stylesheet" href="/css/article.css">
+        <link rel="stylesheet" href="/css/toc.css">
+        <script src="/js/jquery-3.6.1.min.js"></script>
+        <script src="/js/scroll_spy.js"></script>
         <script>
             MathJax = {
                 tex: {
@@ -22,70 +25,80 @@
     <body>
         {% include topbar.html %}
         <div id="main">
-            <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
-                <header class="post-header">
-                    {%- if page.teaser -%}
-                    <div class="post-teaser">
-                        <img src="{{ page.teaser }}" alt="{{ page.title }}">
+            <aside style="flex: 0 0 200px;">
+                <div class="toc-container">
+                    <div class="toc-title">CONTENTS</div>
+                    <div class="toc">
+                        {% include toc.html html=content h_min=2 h_max=3 %}
                     </div>
-                    {%- endif -%}
-                    <h1 class="post-title p-name" itemprop="name headline">{{ page.title | escape }}</h1>
-                    <div class="post-meta">
-                    {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
-                    {% assign pdate = page.date | date_to_xmlschema %}
-                    <span class="meta-label">Published:</span>&nbsp;
-                    <time class="dt-published" datetime="{{ pdate }}" itemprop="datePublished">
-                        {{ pdate | date: date_format }}
-                    </time>
-                    &nbsp;&nbsp;
-                    <span class="meta-label">Languages:</span>&nbsp;&nbsp;
-                    {%- assign en_page = site.blogs | where: "blog_id", page.blog_id | where: "lang", "en" | first -%}
-                    {%- assign zh_page = site.blogs | where: "blog_id", page.blog_id | where: "lang", "zh" | first -%}
-                    {%- if page.lang == 'en' -%}
-                    <span>English</span>
-                    {%- if zh_page -%}
-                    &nbsp;|&nbsp;<a href="{{ page.url | prepend: site.baseurl | replace:'/en/','/zh/' }}">中文</a>
-                    {%- endif -%}
-                    {%- else -%}
-                    {%- if en_page -%}
-                    <a href="{{ page.url | prepend: site.baseurl | replace:'/zh/','/en/' }}">English</a>&nbsp;|&nbsp;
-                    {%- endif -%}
-                    <span>中文</span>
-                    {%- endif -%}
-                    {%- if page.github or page.zhihu -%}
-                    &nbsp;&nbsp;
-                    <span class="meta-label">Links:</span>&ensp;
-                    {%- if page.github -%}
-                    <a class="icon-logo-github" href="{{ page.github }}" target="_blank"></a>
-                    {%- endif -%}
-                    {%- if page.zhihu -%}
-                    &nbsp;<a class="icon-logo-zhihu" href="{{ page.zhihu }}" target="_blank"></a>
-                    {%- endif -%}
-                    {%- endif -%}
-                </header>
-
-                <div class="post-content e-content" itemprop="articleBody">
-                    {{ content }}
                 </div>
+            </aside>
+            <main style="flex: 1; min-width: 0;">
+                <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+                    <header class="post-header">
+                        {%- if page.teaser -%}
+                        <div class="post-teaser">
+                            <img src="{{ page.teaser }}" alt="{{ page.title }}">
+                        </div>
+                        {%- endif -%}
+                        <h1 class="post-title p-name" itemprop="name headline">{{ page.title | escape }}</h1>
+                        <div class="post-meta">
+                        {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+                        {% assign pdate = page.date | date_to_xmlschema %}
+                        <span class="meta-label">Published:</span>&nbsp;
+                        <time class="dt-published" datetime="{{ pdate }}" itemprop="datePublished">
+                            {{ pdate | date: date_format }}
+                        </time>
+                        &nbsp;&nbsp;
+                        <span class="meta-label">Languages:</span>&nbsp;&nbsp;
+                        {%- assign en_page = site.blogs | where: "blog_id", page.blog_id | where: "lang", "en" | first -%}
+                        {%- assign zh_page = site.blogs | where: "blog_id", page.blog_id | where: "lang", "zh" | first -%}
+                        {%- if page.lang == 'en' -%}
+                        <span>English</span>
+                        {%- if zh_page -%}
+                        &nbsp;|&nbsp;<a href="{{ page.url | prepend: site.baseurl | replace:'/en/','/zh/' }}">中文</a>
+                        {%- endif -%}
+                        {%- else -%}
+                        {%- if en_page -%}
+                        <a href="{{ page.url | prepend: site.baseurl | replace:'/zh/','/en/' }}">English</a>&nbsp;|&nbsp;
+                        {%- endif -%}
+                        <span>中文</span>
+                        {%- endif -%}
+                        {%- if page.github or page.zhihu -%}
+                        &nbsp;&nbsp;
+                        <span class="meta-label">Links:</span>&ensp;
+                        {%- if page.github -%}
+                        <a class="icon-logo-github" href="{{ page.github }}" target="_blank"></a>
+                        {%- endif -%}
+                        {%- if page.zhihu -%}
+                        &nbsp;<a class="icon-logo-zhihu" href="{{ page.zhihu }}" target="_blank"></a>
+                        {%- endif -%}
+                        {%- endif -%}
+                    </header>
+                
+                    <div class="post-content e-content" itemprop="articleBody">
+                    {{ content }}
+                    </div>
 
-                <script src="https://giscus.app/client.js"
-                    data-repo="JeffreyXiang/jeffreyxiang.github.io"
-                    data-repo-id="R_kgDOIL4TYQ"
-                    data-category="Comments"
-                    data-category-id="DIC_kwDOIL4TYc4CvTq9"
-                    data-mapping="specific"
-                    data-term="{{ page.blog_id }}"
-                    data-strict="0"
-                    data-reactions-enabled="1"
-                    data-emit-metadata="0"
-                    data-input-position="bottom"
-                    data-theme="light"
-                    data-lang="en"
-                    data-loading="lazy"
-                    crossorigin="anonymous"
-                    async>
-                </script>
-            </article>
+                    <script src="https://giscus.app/client.js"
+                        data-repo="JeffreyXiang/jeffreyxiang.github.io"
+                        data-repo-id="R_kgDOIL4TYQ"
+                        data-category="Comments"
+                        data-category-id="DIC_kwDOIL4TYc4CvTq9"
+                        data-mapping="specific"
+                        data-term="{{ page.blog_id }}"
+                        data-strict="0"
+                        data-reactions-enabled="1"
+                        data-emit-metadata="0"
+                        data-input-position="bottom"
+                        data-theme="light"
+                        data-lang="en"
+                        data-loading="lazy"
+                        crossorigin="anonymous"
+                        async>
+                    </script>
+                </article>
+            </main>
         </div>
         {% include bottombar.html %}
     </body>
