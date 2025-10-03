@@ -1,7 +1,7 @@
 ---
 layout: blog
 title: "用 Taichi 学光线追踪（一）：第一个周末"
-excerpt: "本文是《用 Taichi 学光线追踪》系列的第一篇，灵感来自《Ray Tracing in One Weekend》。目标是用最小代价实现一个可运行的光线追踪器，让读者快速看到效果，理解光线追踪的核心步骤。文章采用 Taichi 重写，降低学习门槛，同时保留高性能与灵活性。从基础的光线与几何体相交出发，逐步加入相机、材质和光照，最终渲染出简单的间接光照效果。本文更偏向学习记录，强调思路与方法，为后续扩展提供坚实基础。"
+excerpt: "用 Taichi 以最小代价实现一个可运行的光线追踪器，理解光线追踪的核心步骤。从基础的光线与几何体相交出发，逐步加入相机、材质和光照，最终渲染出简单的间接光照效果。"
 series: "Learn Ray Tracing with Taichi"
 blog_id: taichi-raytracing-1
 permalink: /zh/blogs/taichi-raytracing-1

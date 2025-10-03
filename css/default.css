@@ -313,37 +313,33 @@ body {
     text-overflow: ellipsis;
 }  */
 
-.blog_list {
-    width: 100%;
+.blog_container {
+    display: flex;
+    gap: 24px;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.blog_container_col {
+    flex: 1,
+    width: 400px;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
+    gap: 24px;
 }
 
 .blog_item {
-    position: relative;
-    width: 800px;
-    margin: 16px 0px;
-    margin-left: 25px;
-    padding-left: 16px;
+    width: 400px;
+    box-shadow: 0 0px 12px rgba(0, 0, 0, 0.25);
+    overflow: hidden;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
 }
 
-.blog_item::before {
-    content: "";
-    position: absolute;
-    left: 0px;
-    top: 0px;
-    width: 3px;
-    height: 100%;
-    background-color: rgb(32, 163, 196);
-}
-
 .blog_item_teaser {
+    position: relative;
     width: 100%;
     height: 200px;
 }
@@ -354,9 +350,28 @@ body {
     object-fit: cover;
 }
 
+.blog_item_bar {
+    position: relative;
+    padding: 8px 12px 8px 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.blog_item_bar::before {
+    content: "";
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 12px;
+    height: 100%;
+    background-color: rgb(32, 163, 196);
+}
+
 .blog_item_title {
-    font-size: 24px;
-    font-weight: 500;
+    font-size: 20px;
+    font-weight: 600;
     margin-bottom: 5px;
 }
 
@@ -369,14 +384,31 @@ body {
 }
 
 .blog_item_info {
-    font-size: 14px;
+    font-size: 12px;
     color: #656565;
-    margin-bottom: 15px;
+    margin-bottom: 4px;
+    font-weight: 600;
 }
 
 .blog_item_excerpt {
+    position: absolute;
+    height: 200px;
+    padding: 0px 12px;
+    background: rgba(0, 0, 0, 0.5);
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.8);
     text-align: justify;
-    margin-bottom: 5px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.25s ease;
+}
+
+.blog_item_teaser:hover .blog_item_excerpt {
+    opacity: 1;
 }
 
 .application_list {

@@ -3,9 +3,33 @@ layout: default
 title: Jianfeng Xiang | Blogs
 ---
 
+<script src="/js/jquery-3.6.1.min.js"></script>
+<script>
+$(function(){
+    var $left = $("#col-left");
+    var $right = $("#col-right");
+
+    $("#all-posts .blog_item").each(function(){
+        var $card = $(this);
+        var leftH = $left.outerHeight();
+        var rightH = $right.outerHeight();
+        if (leftH <= rightH) {
+        $left.append($card);
+        } else {
+        $right.append($card);
+        }
+    });
+});
+</script>
+
 <div class="title">BLOGS</div>
 
-<div class="blog_list">
+<div class="blog_container">
+    <div class="blog_container_col" id="col-left"></div>
+    <div class="blog_container_col" id="col-right"></div>
+</div>
+
+<div id="all-posts" style="display:none;">
     {% assign grouped = site.blogs | sort: "date" | reverse | group_by: "blog_id" %}
     {% for group in grouped %}
         {% assign posts = group.items %}
@@ -18,27 +42,32 @@ title: Jianfeng Xiang | Blogs
         {% endif %}
 
         <div class="blog_item">
-            <div class="blog_item_title">
-                <a href="{{ post.url }}">{{ post.title }}</a>
-            </div>
-            <div class="blog_item_info">
-                {{ post.date | date: "%Y-%m-%d" }}
-                &nbsp;&nbsp;
-                [
-                {% if en_post %}
-                    <a href="{{ en_post.url }}">English</a>
-                    {% if zh_post %}
-                    &nbsp;|&nbsp;
-                    <a href="{{ zh_post.url }}">中文</a>
-                    {% endif %}
-                {% else %}
-                    <a href="{{ zh_post.url }}">中文</a>
+            <div class="blog_item_teaser">
+                {% if post.excerpt %}
+                <div class="blog_item_excerpt">{{ post.excerpt }}</div>
                 {% endif %}
-                ]
+                <img src="{{ post.teaser }}" alt="{{ post.title }}">
             </div>
-            {% if post.excerpt %}
-            <div class="blog_item_excerpt">{{ post.excerpt }}</div>
-            {% endif %}
+            <div class="blog_item_bar">
+                <div class="blog_item_title">
+                    <a href="{{ post.url }}">{{ post.title }}</a>
+                </div>
+                <div class="blog_item_info">
+                    {{ post.date | date: "%Y-%m-%d" }}
+                    &nbsp;&nbsp;
+                    [
+                    {% if en_post %}
+                        <a href="{{ en_post.url }}">English</a>
+                        {% if zh_post %}
+                        &nbsp;|&nbsp;
+                        <a href="{{ zh_post.url }}">中文</a>
+                        {% endif %}
+                    {% else %}
+                        <a href="{{ zh_post.url }}">中文</a>
+                    {% endif %}
+                    ]
+                </div>
+            </div>
         </div>
     {% endfor %}
 </div>
