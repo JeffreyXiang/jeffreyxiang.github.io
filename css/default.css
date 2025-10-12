@@ -321,15 +321,13 @@ body {
 }
 
 .blog_container_col {
-    flex: 1,
-    width: 400px;
     display: flex;
     flex-direction: column;
     gap: 24px;
 }
 
 .blog_item {
-    width: 400px;
+    width: 500px;
     box-shadow: 0 0px 12px rgba(0, 0, 0, 0.25);
     overflow: hidden;
     display: flex;
@@ -341,7 +339,7 @@ body {
 .blog_item_teaser {
     position: relative;
     width: 100%;
-    height: 200px;
+    height: 250px;
 }
 
 .blog_item_teaser img {
@@ -392,9 +390,9 @@ body {
 
 .blog_item_excerpt {
     position: absolute;
-    height: 200px;
+    height: 100%;
     padding: 0px 12px;
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.75);
     font-size: 14px;
     color: rgba(255, 255, 255, 0.8);
     text-align: justify;
