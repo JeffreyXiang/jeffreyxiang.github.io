@@ -18,6 +18,7 @@ collections:
   applications:
     output: false
 publication_order:
+  - trellis.2
   - moge-2
   - trellis
   - moge
