@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Jianfeng Xiang — Resume</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #fafafa;
+    --surface: #ffffff;
+    --text: #1a1a1a;
+    --muted: #6b7280;
+    --subtle: #9ca3af;
+    --border: #e5e7eb;
+    --accent: #2563eb;
+    --accent-soft: #eff6ff;
+    --highlight: #f59e0b;
+    --shadow: 0 1px 2px rgba(0,0,0,0.04), 0 4px 12px rgba(0,0,0,0.04);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #0f1115;
+      --surface: #161a21;
+      --text: #e6e8ec;
+      --muted: #9aa3b2;
+      --subtle: #6b7280;
+      --border: #242a35;
+      --accent: #60a5fa;
+      --accent-soft: #1c2333;
+      --highlight: #fbbf24;
+      --shadow: 0 1px 2px rgba(0,0,0,0.3), 0 4px 14px rgba(0,0,0,0.25);
+    }
+  }
+  * { box-sizing: border-box; }
+  html, body {
+    margin: 0; padding: 0;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+
+  .container {
+    max-width: 880px;
+    margin: 0 auto;
+    padding: 56px 32px 80px;
+  }
+
+  /* Header */
+  header {
+    display: flex;
+    gap: 28px;
+    align-items: center;
+    padding-bottom: 28px;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 36px;
+  }
+  .avatar {
+    width: 104px; height: 104px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 1px solid var(--border);
+    flex-shrink: 0;
+  }
+  .header-info h1 {
+    font-size: 30px;
+    font-weight: 700;
+    margin: 0 0 4px;
+    letter-spacing: -0.02em;
+  }
+  .header-info .zh {
+    font-weight: 400;
+    color: var(--muted);
+    font-size: 22px;
+    margin-left: 8px;
+  }
+  .header-info .role {
+    font-size: 15px;
+    color: var(--muted);
+    margin: 0 0 10px;
+  }
+  .contact {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    font-size: 13.5px;
+    color: var(--muted);
+  }
+  .contact span, .contact a {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+  }
+
+  /* Sections */
+  section {
+    margin-bottom: 40px;
+  }
+  h2 {
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--muted);
+    margin: 0 0 18px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--border);
+  }
+  p { margin: 0 0 12px; }
+
+  /* Item rows */
+  .item {
+    display: grid;
+    grid-template-columns: 130px 1fr;
+    gap: 20px;
+    margin-bottom: 18px;
+  }
+  .item .meta {
+    font-size: 13px;
+    color: var(--subtle);
+    font-family: 'JetBrains Mono', monospace;
+    padding-top: 2px;
+  }
+  .item .body .title {
+    font-weight: 600;
+    font-size: 15px;
+    color: var(--text);
+  }
+  .item .body .sub {
+    font-size: 14px;
+    color: var(--muted);
+    margin-top: 2px;
+  }
+  .item .body .desc {
+    font-size: 14px;
+    color: var(--muted);
+    margin-top: 6px;
+  }
+
+  /* Publications */
+  .pub {
+    padding: 14px 0;
+    border-bottom: 1px dashed var(--border);
+  }
+  .pub:last-child { border-bottom: none; }
+  .pub-title {
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 1.4;
+    margin-bottom: 4px;
+  }
+  .pub-authors {
+    font-size: 13.5px;
+    color: var(--muted);
+    margin-bottom: 4px;
+  }
+  .pub-authors .me { color: var(--text); font-weight: 600; }
+  .pub-venue {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 6px;
+    font-size: 13px;
+    margin-top: 6px;
+  }
+  .pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    padding: 2px 9px;
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: 600;
+    font-family: 'JetBrains Mono', monospace;
+    border: 1px solid var(--border);
+    background: var(--surface);
+    color: var(--muted);
+    text-decoration: none;
+    line-height: 1.6;
+  }
+  .pill:hover { text-decoration: none; border-color: var(--accent); color: var(--accent); }
+  .pill-venue { background: var(--accent-soft); color: var(--accent); border-color: transparent; }
+  .pill-oral { background: rgba(245,158,11,0.14); color: var(--highlight); border-color: transparent; }
+  .pill-cite { color: #16a34a; border-color: rgba(22,163,74,0.3); }
+  .pill-star { color: #d97706; border-color: rgba(217,119,6,0.3); }
+  .pill-link { color: var(--accent); border-color: rgba(37,99,235,0.25); }
+  @media (prefers-color-scheme: dark) {
+    .pill-cite { color: #4ade80; }
+    .pill-star { color: #fbbf24; }
+  }
+  .venue-tag {
+    display: inline-block;
+    padding: 2px 8px;
+    border-radius: 4px;
+    background: var(--accent-soft);
+    color: var(--accent);
+    font-weight: 600;
+    font-size: 12px;
+    font-family: 'JetBrains Mono', monospace;
+  }
+  .badge {
+    display: inline-block;
+    padding: 2px 7px;
+    border-radius: 4px;
+    background: rgba(245, 158, 11, 0.12);
+    color: var(--highlight);
+    font-weight: 600;
+    font-size: 11.5px;
+    margin-left: 4px;
+  }
+  .pub-link {
+    margin-left: 6px;
+    font-size: 13px;
+  }
+
+  /* Repos grid */
+  .repos {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 12px;
+  }
+  .repo {
+    padding: 14px 16px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    background: var(--surface);
+    transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
+  }
+  .repo:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow);
+    border-color: var(--accent);
+  }
+  .repo-name {
+    font-weight: 600;
+    font-size: 14.5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 6px;
+  }
+  .repo-name a { color: var(--text); }
+  .repo-name a:hover { color: var(--accent); text-decoration: none; }
+  .stars {
+    font-size: 12px;
+    color: var(--muted);
+    font-weight: 500;
+    display: inline-flex;
+    align-items: center;
+    gap: 3px;
+  }
+  .repo-desc {
+    font-size: 13px;
+    color: var(--muted);
+    line-height: 1.5;
+  }
+
+  /* Skills */
+  .tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .tag {
+    font-size: 12.5px;
+    padding: 4px 10px;
+    border-radius: 999px;
+    border: 1px solid var(--border);
+    color: var(--muted);
+    background: var(--surface);
+  }
+
+  /* Links section */
+  .links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    font-size: 14px;
+  }
+
+  /* Stats summary */
+  .stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 14px;
+    margin-bottom: 28px;
+  }
+  .stat {
+    padding: 16px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    background: var(--surface);
+    text-align: center;
+  }
+  .stat .num {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--accent);
+    font-family: 'JetBrains Mono', monospace;
+  }
+  .stat .label {
+    font-size: 12px;
+    color: var(--muted);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin-top: 2px;
+  }
+
+  /* Strengths */
+  .strengths {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 14px;
+  }
+  .strength {
+    padding: 16px 18px;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    background: var(--surface);
+    border-left: 3px solid var(--accent);
+  }
+  .strength h3 {
+    margin: 0 0 6px;
+    font-size: 14.5px;
+    font-weight: 600;
+    color: var(--text);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .strength .level {
+    font-size: 11px;
+    font-family: 'JetBrains Mono', monospace;
+    color: var(--accent);
+    background: var(--accent-soft);
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-weight: 600;
+  }
+  .strength p {
+    font-size: 13px;
+    color: var(--muted);
+    margin: 0;
+    line-height: 1.55;
+  }
+  .summary-quote {
+    margin-top: 18px;
+    padding: 14px 18px;
+    border-left: 3px solid var(--highlight);
+    background: rgba(245, 158, 11, 0.06);
+    border-radius: 4px;
+    font-size: 14px;
+    color: var(--text);
+    font-style: italic;
+  }
+
+  @media (max-width: 640px) {
+    .container { padding: 32px 20px 60px; }
+    header { flex-direction: column; text-align: center; gap: 16px; }
+    .contact { justify-content: center; }
+    .item { grid-template-columns: 1fr; gap: 4px; }
+    .item .meta { font-size: 12px; }
+    .stats { grid-template-columns: 1fr; }
+  }
+
+  /* Print */
+  @media print {
+    :root { --bg: #fff; --surface: #fff; }
+    .container { max-width: 100%; padding: 20px; }
+    .repo, .stat { break-inside: avoid; }
+    a { color: var(--text); }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <header>
+    <img class="avatar" src="https://jeffreyxiang.github.io/imgs/profile_photo.jpg" alt="Jianfeng Xiang" onerror="this.style.display='none'"/>
+    <div class="header-info">
+      <h1>Jianfeng Xiang<span class="zh">向剑锋</span></h1>
+      <p class="role">Ph.D Student · Computer Vision &amp; 3D Generation</p>
+      <div class="contact">
+        <span>📍 Beijing, China</span>
+        <a href="mailto:belljig@outlook.com">✉ belljig@outlook.com</a>
+        <a href="https://jeffreyxiang.github.io/" target="_blank">🌐 jeffreyxiang.github.io</a>
+        <a href="https://github.com/JeffreyXiang" target="_blank">⌘ GitHub</a>
+        <a href="https://scholar.google.com/citations?user=1A5u3S8AAAAJ" target="_blank">🎓 Scholar</a>
+      </div>
+    </div>
+  </header>
+
+  <section>
+    <h2>About</h2>
+    <p>
+      Ph.D student at the <strong>Institute for Advanced Study, Tsinghua University</strong>,
+      advised by Prof. Baining Guo. Research intern at the Spatial Intelligence Group,
+      <strong>Microsoft Research Asia</strong> since Jul 2021, working with Sicheng Xu, Jiaolong Yang and Xin Tong.
+      Research interests span <em>3D generation, 3D representation learning, and neural rendering</em>.
+      Also passionate about real-time rendering, shader programming for Minecraft, and embedded systems.
+    </p>
+  </section>
+
+  <section>
+    <h2>At a Glance</h2>
+    <div class="stats">
+      <div class="stat"><div class="num">9+</div><div class="label">Publications</div></div>
+      <div class="stat"><div class="num">1.4k+</div><div class="label">Citations</div></div>
+      <div class="stat"><div class="num">22k+</div><div class="label">GitHub Stars</div></div>
+      <div class="stat"><div class="num">4×</div><div class="label">CVPR / ICCV Oral &amp; Highlights</div></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Core Strengths</h2>
+    <div class="strengths">
+      <div class="strength">
+        <h3>3D Generation <span class="level">Leading</span></h3>
+        <p>First-author of TRELLIS (CVPR'25 Highlight) &amp; TRELLIS.2 (CVPR'26 Oral) — defining the SLAT / O-Voxel paradigm now adopted as a community baseline. Four consecutive first-author CVPR/ICCV works in four years.</p>
+      </div>
+      <div class="strength">
+        <h3>High-Performance Systems <span class="level">Strong</span></h3>
+        <p>Hand-written CUDA kernels (CuMesh, FlexGEMM, diffoctreerast) and large-scale training stack supporting up to 4B-parameter flow-matching models in production.</p>
+      </div>
+      <div class="strength">
+        <h3>Open-Source Impact <span class="level">22k+ ★</span></h3>
+        <p>Repositories trusted and reproduced widely across academia and industry; TRELLIS is a de-facto baseline for open 3D generation research.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Education</h2>
+    <div class="item">
+      <div class="meta">2022 – Present</div>
+      <div class="body">
+        <div class="title">Ph.D in Computer Science</div>
+        <div class="sub">Institute for Advanced Study, Tsinghua University · Advisor: Prof. Baining Guo</div>
+      </div>
+    </div>
+    <div class="item">
+      <div class="meta">2018 – 2022</div>
+      <div class="body">
+        <div class="title">B.E. in Electronic Information Engineering</div>
+        <div class="sub">University of Science and Technology of China (USTC) · School of the Gifted Young</div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Experience</h2>
+    <div class="item">
+      <div class="meta">Jul 2021 – Now</div>
+      <div class="body">
+        <div class="title">Research Intern · Microsoft Research Asia</div>
+        <div class="sub">Spatial Intelligence Group (Internet Graphics)</div>
+        <div class="desc">3D generation, neural rendering, monocular geometry estimation. Lead author of TRELLIS series.</div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Selected Publications</h2>
+
+    <div class="pub">
+      <div class="pub-title">Native and Compact Structured Latents for 3D Generation</div>
+      <div class="pub-authors"><span class="me">Jianfeng Xiang</span>, Xiaoxue Chen, Sicheng Xu, Ruicheng Wang, Zelong Lv, Yu Deng, Hongyuan Zhu, Yue Dong, Hao Zhao, Nicholas Jing Yuan, Jiaolong Yang</div>
+      <div class="pub-venue">
+        <span class="pill pill-venue">CVPR 2026</span>
+        <span class="pill pill-oral">Oral</span>
+        <span class="pill pill-cite">↗ 28 cites</span>
+        <a class="pill pill-star" data-repo="microsoft/TRELLIS.2" href="https://github.com/microsoft/TRELLIS.2" target="_blank">★ 6.7k</a>
+        <a class="pill pill-link" href="https://microsoft.github.io/TRELLIS.2" target="_blank">↗ project</a>
+      </div>
+    </div>
+
+    <div class="pub">
+      <div class="pub-title">MoGe-2: Accurate Monocular Geometry with Metric Scale and Sharp Details</div>
+      <div class="pub-authors">Ruicheng Wang, Sicheng Xu, Yue Dong, Yu Deng, <span class="me">Jianfeng Xiang</span>, Zelong Lv, Guangzhong Sun, Xin Tong, Jiaolong Yang</div>
+      <div class="pub-venue">
+        <span class="pill pill-venue">NeurIPS 2025</span>
+        <span class="pill pill-cite">↗ 100 cites</span>
+        <a class="pill pill-star" data-repo="microsoft/MoGe" href="https://github.com/microsoft/MoGe" target="_blank">★ 2.4k</a>
+        <a class="pill pill-link" href="https://wangrc.site/MoGe2Page/" target="_blank">↗ project</a>
+      </div>
+    </div>
+
+    <div class="pub">
+      <div class="pub-title">Structured 3D Latents for Scalable and Versatile 3D Generation (TRELLIS)</div>
+      <div class="pub-authors"><span class="me">Jianfeng Xiang</span>, Zelong Lv, Sicheng Xu, Yu Deng, Ruicheng Wang, Bowen Zhang, Dong Chen, Xin Tong, Jiaolong Yang</div>
+      <div class="pub-venue">
+        <span class="pill pill-venue">CVPR 2025</span>
+        <span class="pill pill-oral">Highlight</span>
+        <span class="pill pill-cite">↗ 611 cites</span>
+        <a class="pill pill-star" data-repo="microsoft/TRELLIS" href="https://github.com/microsoft/TRELLIS" target="_blank">★ 12.5k</a>
+        <a class="pill pill-link" href="https://trellis3d.github.io/" target="_blank">↗ project</a>
+      </div>
+    </div>
+
+    <div class="pub">
+      <div class="pub-title">MoGe: Unlocking Accurate Monocular Geometry Estimation for Open-Domain Images</div>
+      <div class="pub-authors">Ruicheng Wang, Sicheng Xu, Cassie Dai, <span class="me">Jianfeng Xiang</span>, Yu Deng, Xin Tong, Jiaolong Yang</div>
+      <div class="pub-venue">
+        <span class="pill pill-venue">CVPR 2025</span>
+        <span class="pill pill-oral">Oral</span>
+        <span class="pill pill-cite">↗ 205 cites</span>
+        <a class="pill pill-star" data-repo="microsoft/MoGe" href="https://github.com/microsoft/MoGe" target="_blank">★ 2.4k</a>
+        <a class="pill pill-link" href="https://wangrc.site/MoGePage/" target="_blank">↗ project</a>
+      </div>
+    </div>
+
+    <div class="pub">
+      <div class="pub-title">Diffusion Models are Geometry Critics: Single Image 3D Editing Using Pre-Trained Diffusion Priors</div>
+      <div class="pub-authors">Ruicheng Wang, <span class="me">Jianfeng Xiang</span>, Jiaolong Yang, Xin Tong</div>
+      <div class="pub-venue">
+        <span class="pill pill-venue">ECCV 2024</span>
+        <span class="pill pill-cite">↗ 14 cites</span>
+        <a class="pill pill-link" href="https://wangrc.site/Diff3DEdit/" target="_blank">↗ project</a>
+      </div>
+    </div>
+
+    <div class="pub">
+      <div class="pub-title">AniPortraitGAN: Animatable 3D Portrait Generation from 2D Image Collections</div>
+      <div class="pub-authors">Yue Wu, Sicheng Xu, <span class="me">Jianfeng Xiang</span>, Fangyun Wei, Qifeng Chen, Jiaolong Yang, Xin Tong</div>
+      <div class="pub-venue">
+        <span class="pill pill-venue">SIGGRAPH Asia 2023</span>
+        <span class="pill pill-cite">↗ 29 cites</span>
+        <a class="pill pill-link" href="https://yuewuhkust.github.io/AniPortraitGAN/" target="_blank">↗ project</a>
+      </div>
+    </div>
+
+    <div class="pub">
+      <div class="pub-title">3D-aware Image Generation using 2D Diffusion Models</div>
+      <div class="pub-authors"><span class="me">Jianfeng Xiang</span>, Jiaolong Yang, Binbin Huang, Xin Tong</div>
+      <div class="pub-venue">
+        <span class="pill pill-venue">ICCV 2023</span>
+        <span class="pill pill-cite">↗ 91 cites</span>
+        <a class="pill pill-star" data-repo="JeffreyXiang/ivid" href="https://github.com/JeffreyXiang/ivid" target="_blank">★ 314</a>
+        <a class="pill pill-link" href="https://jeffreyxiang.github.io/ivid/" target="_blank">↗ project</a>
+      </div>
+    </div>
+
+    <div class="pub">
+      <div class="pub-title">GRAM-HD: 3D-Consistent Image Generation at High Resolution with Generative Radiance Manifolds</div>
+      <div class="pub-authors"><span class="me">Jianfeng Xiang</span>, Jiaolong Yang, Yu Deng, Xin Tong</div>
+      <div class="pub-venue">
+        <span class="pill pill-venue">ICCV 2023</span>
+        <span class="pill pill-cite">↗ 100 cites</span>
+        <a class="pill pill-star" data-repo="JeffreyXiang/GRAM-HD" href="https://github.com/JeffreyXiang/GRAM-HD" target="_blank">★ 40</a>
+        <a class="pill pill-link" href="https://jeffreyxiang.github.io/GRAM-HD/" target="_blank">↗ project</a>
+      </div>
+    </div>
+
+    <div class="pub">
+      <div class="pub-title">GRAM: Generative Radiance Manifolds for 3D-Aware Image Generation</div>
+      <div class="pub-authors">Yu Deng, Jiaolong Yang, <span class="me">Jianfeng Xiang</span>, Xin Tong</div>
+      <div class="pub-venue">
+        <span class="pill pill-venue">CVPR 2022</span>
+        <span class="pill pill-oral">Oral</span>
+        <span class="pill pill-cite">↗ 305 cites</span>
+        <a class="pill pill-link" href="https://yudeng.github.io/GRAM/" target="_blank">↗ project</a>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Open-Source Projects</h2>
+    <div class="repos">
+      <div class="repo">
+        <div class="repo-name">
+          <a href="https://github.com/microsoft/TRELLIS.2" target="_blank">microsoft/TRELLIS.2</a>
+          <span class="stars" data-repo="microsoft/TRELLIS.2">★ 6.7k</span>
+        </div>
+        <div class="repo-desc">Native and Compact Structured Latents for 3D Generation — CVPR 2026 Oral (lead author).</div>
+      </div>
+      <div class="repo">
+        <div class="repo-name">
+          <a href="https://github.com/microsoft/TRELLIS" target="_blank">microsoft/TRELLIS</a>
+          <span class="stars" data-repo="microsoft/TRELLIS">★ 12.5k</span>
+        </div>
+        <div class="repo-desc">Structured 3D Latents for Scalable and Versatile 3D Generation — CVPR 2025 Highlight (lead author).</div>
+      </div>
+      <div class="repo">
+        <div class="repo-name">
+          <a href="https://github.com/microsoft/MoGe" target="_blank">microsoft/MoGe</a>
+          <span class="stars" data-repo="microsoft/MoGe">★ 2.4k</span>
+        </div>
+        <div class="repo-desc">MoGe &amp; MoGe-2 — monocular geometry estimation (CVPR 2025 Oral / NeurIPS 2025).</div>
+      </div>
+      <div class="repo">
+        <div class="repo-name">
+          <a href="https://github.com/JeffreyXiang/ivid" target="_blank">JeffreyXiang/ivid</a>
+          <span class="stars" data-repo="JeffreyXiang/ivid">★ 314</span>
+        </div>
+        <div class="repo-desc">PyTorch implementation of "3D-aware Image Generation using 2D Diffusion Models" (ICCV).</div>
+      </div>
+      <div class="repo">
+        <div class="repo-name">
+          <a href="https://github.com/JeffreyXiang/CuMesh" target="_blank">JeffreyXiang/CuMesh</a>
+          <span class="stars" data-repo="JeffreyXiang/CuMesh">★ 189</span>
+        </div>
+        <div class="repo-desc">CUDA mesh utilities for high-performance geometry processing.</div>
+      </div>
+      <div class="repo">
+        <div class="repo-name">
+          <a href="https://github.com/JeffreyXiang/FlexGEMM" target="_blank">JeffreyXiang/FlexGEMM</a>
+          <span class="stars" data-repo="JeffreyXiang/FlexGEMM">★ 126</span>
+        </div>
+        <div class="repo-desc">A cross-platform backend for high-performance sparse convolutions.</div>
+      </div>
+  </section>
+
+  <section>
+    <h2>Research Interests &amp; Skills</h2>
+    <div class="tags">
+      <span class="tag">3D Generation</span>
+      <span class="tag">Neural Rendering</span>
+      <span class="tag">3D Representation Learning</span>
+      <span class="tag">Diffusion Models</span>
+      <span class="tag">Generative Models / GANs</span>
+      <span class="tag">Real-time Rendering</span>
+      <span class="tag">PyTorch</span>
+      <span class="tag">CUDA</span>
+      <span class="tag">C++ / Python</span>
+      <span class="tag">GLSL Shaders</span>
+      <span class="tag">Embedded Systems</span>
+    </div>
+  </section>
+
+  <section>
+    <h2>Links</h2>
+    <div class="links">
+      <a href="https://github.com/JeffreyXiang" target="_blank">GitHub</a>
+      <a href="https://scholar.google.com/citations?user=1A5u3S8AAAAJ" target="_blank">Google Scholar</a>
+      <a href="https://jeffreyxiang.github.io/" target="_blank">Homepage</a>
+      <a href="https://jeffreyxiang.github.io/publications" target="_blank">Publications</a>
+    </div>
+  </section>
+
+  <footer style="text-align:center; color:var(--subtle); font-size:12px; margin-top:40px;">
+    Last updated 2026 · Built with care. <span id="live-badge" style="opacity:0.7;"></span>
+  </footer>
+</div>
+
+<script>
+(() => {
+  const fmt = n => n >= 1000 ? (n/1000).toFixed(n >= 10000 ? 0 : 1).replace(/\.0$/,'') + 'k' : String(n);
+  const els = document.querySelectorAll('[data-repo]');
+  const repos = [...new Set([...els].map(e => e.dataset.repo))];
+  let total = 0, done = 0;
+  let live = false;
+
+  Promise.all(repos.map(r =>
+    fetch(`https://api.github.com/repos/${r}`, { headers: { 'Accept': 'application/vnd.github+json' } })
+      .then(res => res.ok ? res.json() : null)
+      .then(data => {
+        if (!data || typeof data.stargazers_count !== 'number') return;
+        live = true;
+        const stars = data.stargazers_count;
+        total += stars;
+        document.querySelectorAll(`[data-repo="${r}"]`).forEach(el => {
+          el.textContent = `★ ${fmt(stars)}`;
+        });
+      })
+      .catch(() => {})
+      .finally(() => { done++; })
+  )).then(() => {
+    if (live && total > 0) {
+      const statStars = document.getElementById('stat-stars');
+      if (statStars) statStars.textContent = fmt(total) + '+';
+      const badge = document.getElementById('live-badge');
+      if (badge) badge.textContent = '· ★ stars fetched live from GitHub';
+    }
+  });
+})();
+</script>
+</body>
+</html>
