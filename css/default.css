@@ -269,30 +269,40 @@ body {
     font-style: italic;
 }
 
-.publication_item_award_wrapper {
-    margin-top: 6px;
-    margin-bottom: 2px;
+.publication_item_badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-bottom: 8px;
 }
 
-.publication_item_award_pill {
+.publication_item_badge {
     display: inline-flex;
     align-items: center;
     padding: 3px 12px;
     font-size: 13px;
     font-weight: 500;
     font-style: normal;
-    color: #ffffff;
-    background-color: #333333;
     border-radius: 999px;
     line-height: 1.4;
 }
 
-.publication_item_award_pill_gold {
-    background-color: #d4a017;
+.publication_item_badge_venue {
     color: #ffffff;
+    background-color: rgb(32, 163, 196);
 }
 
-.publication_item_award_pill_gold .publication_item_icon {
+.publication_item_badge_dark {
+    color: #ffffff;
+    background-color: #333333;
+}
+
+.publication_item_badge_gold {
+    color: #ffffff;
+    background-color: #d4a017;
+}
+
+.publication_item_badge_gold .publication_item_icon {
     color: #ffffff;
 }
 

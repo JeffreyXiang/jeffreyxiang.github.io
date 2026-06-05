@@ -3,6 +3,7 @@ order_id: moge-2
 title: "MoGe-2: Accurate Monocular Geometry with Metric Scale and Sharp Details"
 authors: "Ruicheng Wang, Sicheng Xu, Yue Dong, Yu Deng, <span class='me'>Jianfeng Xiang</span>, Zelong Lv, Guangzhong Sun, Xin Tong, Jiaolong Yang"
 location: "Neural Information Processing Systems (NeurIPS), 2025"
+venue: "NeurIPS 2025"
 teaser: "/videos/moge-2.mp4"
 teaser_type: "video"
 page_url: "https://wangrc.site/MoGe2Page/"

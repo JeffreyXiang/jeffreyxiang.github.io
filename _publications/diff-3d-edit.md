@@ -3,6 +3,7 @@ order_id: diff-3d-edit
 title: "Diffusion Models are Geometry Critics: Single Image 3D Editing Using Pre-Trained Diffusion Priors"
 authors: "Ruicheng Wang, <span class='me'>Jianfeng Xiang</span>, Jiaolong Yang, Xin Tong"
 location: "2024 European Conference on Computer Vision, ECCV 2024"
+venue: "ECCV 2024"
 teaser: "/videos/diff-3d-edit.mp4"
 teaser_type: "video"
 page_url: "https://wangrc.site/Diff3DEdit/"

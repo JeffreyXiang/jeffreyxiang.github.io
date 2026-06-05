@@ -3,6 +3,7 @@ order_id: trellis.2
 title: "Native and Compact Structured Latents for 3D Generation"
 authors: "<span class='me'>Jianfeng Xiang</span>, Xiaoxue Chen, Sicheng Xu, Ruicheng Wang, Zelong Lv, Yu Deng, Hongyuan Zhu, Yue Dong, Hao Zhao, Nicholas Jing Yuan, Jiaolong Yang"
 location: "2026 IEEE Conference on Computer Vision and Pattern Recognition, CVPR 2026"
+venue: "CVPR 2026"
 award: "Best Student Paper Award"
 teaser: "/videos/trellis2.mp4"
 teaser_type: "video"

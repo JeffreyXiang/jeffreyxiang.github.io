@@ -3,6 +3,7 @@ order_id: ani-portrait-gan
 title: "AniPortraitGAN: Animatable 3D Portrait Generation from 2D Image Collections"
 authors: "Yue Wu, Sicheng Xu, <span class='me'>Jianfeng Xiang</span>, Fangyun Wei, Qifeng Chen, Jiaolong Yang, Xin Tong"
 location: "SIGGRAPH Asia 2023"
+venue: "SIGGRAPH Asia 2023"
 teaser: "/videos/ani-portrait-gan.mp4"
 teaser_type: "video"
 page_url: "https://yuewuhkust.github.io/AniPortraitGAN/"
