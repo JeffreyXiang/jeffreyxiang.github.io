@@ -20,8 +20,15 @@ title: Jianfeng Xiang | Publications
                 <div class="publication_item_title">{{ publication.title }}</div>
                 <div class="publication_item_authors">{{ publication.authors }}</div>
                 <div class="publication_item_location">
-                    {{ publication.location }}{% if publication.award %}<span class="publication_item_award">{{ publication.award }}</span>{% endif %}
+                    <svg class="publication_item_icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7zm0 9.5a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5z"/></svg>
+                    {{ publication.location }}
                 </div>
+                {% if publication.award %}
+                <div class="publication_item_award">
+                    <svg class="publication_item_icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3h10v2h3v3a4 4 0 0 1-4 4 5 5 0 0 1-3 2.83V17h3v2h-8v-2h3v-2.17A5 5 0 0 1 8 12a4 4 0 0 1-4-4V5h3V3zm-1 4v1a2 2 0 0 0 2 2V7H6zm12 0h-2v3a2 2 0 0 0 2-2V7zM6 20h12v2H6v-2z"/></svg>
+                    {{ publication.award }}
+                </div>
+                {% endif %}
                 <div class="publication_item_links"><a target="_blank" href="{{ publication.page_url }}">Link</a></div>
                 <div class="publication_item_abstract">{{ publication.abstract }}</div>
             </div>

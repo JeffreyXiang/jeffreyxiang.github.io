@@ -267,19 +267,24 @@ body {
     font-size: 16px;
     font-weight: 300;
     font-style: italic;
+    display: flex;
+    align-items: center;
 }
 
 .publication_item_award {
-    display: inline-block;
-    margin-left: 8px;
-    padding: 1px 8px;
-    font-size: 13px;
-    font-weight: 600;
-    font-style: normal;
-    color: #ffffff;
-    background-color: #d4a017;
-    border-radius: 4px;
-    vertical-align: middle;
+    font-size: 16px;
+    font-weight: 500;
+    color: #d4a017;
+    display: flex;
+    align-items: center;
+}
+
+.publication_item_icon {
+    width: 1em;
+    height: 1em;
+    margin-right: 6px;
+    fill: currentColor;
+    flex-shrink: 0;
 }
 
 .publication_item_links {
