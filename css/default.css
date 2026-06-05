@@ -279,11 +279,10 @@ body {
 .publication_item_badge {
     display: inline-flex;
     align-items: center;
-    padding: 3px 12px;
-    font-size: 13px;
+    padding: 1px 8px;
+    font-size: 14px;
     font-weight: 500;
     font-style: normal;
-    border-radius: 999px;
     line-height: 1.4;
 }
 
