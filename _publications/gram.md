@@ -2,7 +2,8 @@
 order_id: gram
 title: "GRAM: Generative Radiance Manifolds for 3D-Aware Image Generation"
 authors: "Yu Deng, Jiaolong Yang, <span class='me'>Jianfeng Xiang</span>, Xin Tong"
-location: "2022 IEEE Conference on Computer Vision and Pattern Recognition, CVPR 2022, Oral Presentation"
+location: "2022 IEEE Conference on Computer Vision and Pattern Recognition, CVPR 2022"
+award: "Oral Presentation"
 teaser: "/videos/gram.mp4"
 teaser_type: "video"
 page_url: "https://yudeng.github.io/GRAM/"

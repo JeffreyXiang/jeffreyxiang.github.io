@@ -2,7 +2,8 @@
 order_id: moge
 title: "MoGe: Unlocking Accurate Monocular Geometry Estimation for Open-Domain Images with Optimal Training Supervision"
 authors: "Ruicheng Wang, Sicheng Xu, Cassie Dai, <span class='me'>Jianfeng Xiang</span>, Yu Deng, Xin Tong, Jiaolong Yang"
-location: "2025 IEEE Conference on Computer Vision and Pattern Recognition, CVPR 2025, Oral Presentation"
+location: "2025 IEEE Conference on Computer Vision and Pattern Recognition, CVPR 2025"
+award: "Oral Presentation"
 teaser: "/imgs/moge.gif"
 teaser_type: "image"
 page_url: "https://wangrc.site/MoGePage/"

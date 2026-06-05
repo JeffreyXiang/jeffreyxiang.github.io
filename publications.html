@@ -19,7 +19,9 @@ title: Jianfeng Xiang | Publications
             <div class="publication_item_text">
                 <div class="publication_item_title">{{ publication.title }}</div>
                 <div class="publication_item_authors">{{ publication.authors }}</div>
-                <div class="publication_item_location">{{ publication.location }}</div>
+                <div class="publication_item_location">
+                    {{ publication.location }}{% if publication.award %}<span class="publication_item_award">{{ publication.award }}</span>{% endif %}
+                </div>
                 <div class="publication_item_links"><a target="_blank" href="{{ publication.page_url }}">Link</a></div>
                 <div class="publication_item_abstract">{{ publication.abstract }}</div>
             </div>

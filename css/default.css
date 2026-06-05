@@ -269,6 +269,19 @@ body {
     font-style: italic;
 }
 
+.publication_item_award {
+    display: inline-block;
+    margin-left: 8px;
+    padding: 1px 8px;
+    font-size: 13px;
+    font-weight: 600;
+    font-style: normal;
+    color: #ffffff;
+    background-color: #d4a017;
+    border-radius: 4px;
+    vertical-align: middle;
+}
+
 .publication_item_links {
     width: 100%;
     display: flex;
