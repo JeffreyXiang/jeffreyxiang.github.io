@@ -256,6 +256,8 @@ body {
 .publication_item_authors {
     font-size: 16px;
     font-weight: 300;
+    display: flex;
+    align-items: baseline;
 }
 
 .publication_item_authors span.me {
@@ -268,23 +270,39 @@ body {
     font-weight: 300;
     font-style: italic;
     display: flex;
-    align-items: center;
+    align-items: baseline;
 }
 
 .publication_item_award {
+    margin-top: 4px;
+    margin-bottom: 2px;
+}
+
+.publication_item_award_gold {
     font-size: 16px;
     font-weight: 500;
     color: #d4a017;
     display: flex;
-    align-items: center;
+    align-items: baseline;
+}
+
+.publication_item_award_pill {
+    display: inline-block;
+    padding: 2px 10px;
+    font-size: 13px;
+    font-weight: 500;
+    color: #ffffff;
+    background-color: #333333;
+    border-radius: 999px;
 }
 
 .publication_item_icon {
-    width: 1em;
-    height: 1em;
+    width: 0.95em;
+    height: 0.95em;
     margin-right: 6px;
     fill: currentColor;
     flex-shrink: 0;
+    transform: translateY(0.1em);
 }
 
 .publication_item_links {
