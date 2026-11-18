@@ -50,7 +50,8 @@ body {
 
 #profile_card {
     position: relative;
-    height: 392px;
+    box-sizing: border-box;
+    min-height: 400px;
     margin: 10px 15px;
     padding-left: 16px;
     padding-bottom: 8px;
@@ -201,6 +202,71 @@ body {
 #profile_link_zhihu::after {
     content: "Zhihu";
     background-color: #056DE8;    
+}
+
+.home_section {
+    width: 100%;
+    max-width: 800px;
+    margin: 16px auto 24px;
+}
+
+.home_section_title {
+    margin-bottom: 16px;
+    color: gray;
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 0.5em;
+    text-align: center;
+}
+
+.home_list {
+    position: relative;
+    padding-left: 16px;
+}
+
+.home_list::before {
+    content: "";
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 3px;
+    height: 100%;
+    background-color: rgb(32, 163, 196);
+}
+
+.home_list_item {
+    padding: 6px 0px;
+    display: flex;
+    align-items: baseline;
+    gap: 16px;
+}
+
+.home_list_date {
+    flex: 0 0 104px;
+    color: gray;
+    font-size: 15px;
+    font-weight: 500;
+    font-variant-numeric: tabular-nums;
+}
+
+.home_list_body {
+    flex: 1 1 auto;
+    min-width: 0;
+}
+
+.home_list_title {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.home_list_sub {
+    color: #555555;
+    font-size: 14px;
+    font-weight: 300;
+}
+
+.home_list_item_highlight .home_list_title {
+    color: #b8860b;
 }
 
 .publication_list {
@@ -560,8 +626,7 @@ body {
     #profile_card {
         width: 100%;
         max-width: 400px;
-        box-sizing: border-box;
-        height: auto;
+        min-height: 0px;
         margin: 10px 0px;
         gap: 16px;
     }
@@ -574,6 +639,16 @@ body {
     #profile_intro {
         margin: 16px auto 24px;
         text-align: left;
+    }
+
+    .home_list_item {
+        flex-direction: column;
+        gap: 0px;
+    }
+
+    .home_list_date {
+        flex: 0 0 auto;
+        font-size: 13px;
     }
 
     .publication_item {
