@@ -18,6 +18,8 @@ collections:
   applications:
     output: false
 publication_order:
+  - moge-3
+  - octworld
   - trellis.2
   - moge-2
   - trellis
