@@ -5,7 +5,7 @@ excerpt: "本篇将通过引入蒙特卡洛积分、GGX 微表面模型与重要
 series: "Learn Ray Tracing with Taichi"
 blog_id: taichi-raytracing-3
 permalink: /zh/blogs/taichi-raytracing-3
-teaser: https://jeffreyxiang.github.io/imgs/taichi-raytracing-3/teaser.jpg
+teaser: /imgs/taichi-raytracing-3/teaser.jpg
 lang: zh
 github: https://github.com/JeffreyXiang/learn_path_tracing
 zhihu: https://zhuanlan.zhihu.com/p/1960857408327914361
@@ -83,7 +83,7 @@ $$
 在渲染中，辐射通量是光源“能量总量”的度量。可以把它看作所有其他辐射量的“母量”，后续的各种定义（强度、亮度、照度）其实都是它在方向、面积和角度上的细化。
 
 <figure>
-<img src="https://jeffreyxiang.github.io/imgs/taichi-raytracing-3/units.png" style="width: 100%">
+<img src="/imgs/taichi-raytracing-3/units.png" style="width: 100%">
 </figure>
 
 #### 辐射强度（Radiant Intensity, $I$）
@@ -127,7 +127,7 @@ $$
 后者用 **Lambert 余弦定律**描述：
 
 <figure>
-<img src="https://jeffreyxiang.github.io/imgs/taichi-raytracing-3/lambert_law.png" style="width: 100%">
+<img src="/imgs/taichi-raytracing-3/lambert_law.png" style="width: 100%">
 </figure>
 
 直观理解：一块表面对光“斜着摆”，看上去接住的光就更少。
@@ -135,7 +135,7 @@ $$
 #### 辐亮度（Radiance, $L$）
 
 <figure>
-<img src="https://jeffreyxiang.github.io/imgs/taichi-raytracing-3/radiance.png" style="width: 300px">
+<img src="/imgs/taichi-raytracing-3/radiance.png" style="width: 300px">
 </figure>
 
 最后，也是渲染中**最核心的量**——**辐亮度**。
@@ -156,7 +156,7 @@ $$
 可以直观证明如下：
 
 <figure>
-<img src="https://jeffreyxiang.github.io/imgs/taichi-raytracing-3/radiance_proof.png" style="width: 400px">
+<img src="/imgs/taichi-raytracing-3/radiance_proof.png" style="width: 400px">
 </figure>
 
 如图所示，空间中有两个面积微元 $\text{d} A_1,\ \text{d} A_2$，两个面积微元距离 $d$，与连线方向夹角分别为$\theta_1,\ \theta_2$
@@ -234,7 +234,7 @@ $$
 > 2. **双向透射分布函数（BTDF）**：描述材质对入射光的透射行为。
 
 <figure>
-<img src="https://jeffreyxiang.github.io/imgs/taichi-raytracing-3/bsdf.png" style="width: 60%">
+<img src="/imgs/taichi-raytracing-3/bsdf.png" style="width: 60%">
 </figure>
 
 直观理解是：**来自方向 $\boldsymbol{\omega}_i$ 的辐亮度，首先转化为表面微元 $\text{d}A$ 接收到的功率 $E$，然后这部分功率再通过 BSDF 分配，成为任意出射方向 $\boldsymbol{\omega}_o$ 上的辐亮度。**
@@ -497,8 +497,8 @@ class DiffuseBSDF:
 
 <figure>
     <img-comparison-slider style="width: 100%">
-        <img slot="first" style="width: 100%" src="https://jeffreyxiang.github.io/imgs/taichi-raytracing-3/19_monte_carlo_nis.jpg" />
-        <img slot="second" style="width: 100%" src="https://jeffreyxiang.github.io/imgs/taichi-raytracing-3/19_monte_carlo_is.jpg" />
+        <img slot="first" style="width: 100%" src="/imgs/taichi-raytracing-3/19_monte_carlo_nis.jpg" />
+        <img slot="second" style="width: 100%" src="/imgs/taichi-raytracing-3/19_monte_carlo_is.jpg" />
     </img-comparison-slider>
     <figcaption>左：均匀采样 | 右：重要性采样</figcaption>
 </figure>
@@ -569,7 +569,7 @@ GGX 的特点是高光柔和、尾部长，计算效率高，非常适合实时�
 在微平面模型中，并非每一个微平面都能完全反射光线到观察方向。微平面之间可能会 **互相遮挡或自遮挡**：当一个微平面被邻近微平面挡住时，它对宏观表面的反射贡献就会减小。为了描述这种现象，我们引入 **几何遮挡函数（Geometric Attenuation Function）** $G(\boldsymbol{\omega}_i, \boldsymbol{\omega}_o)$。
 
 <figure>
-<img src="https://jeffreyxiang.github.io/imgs/taichi-raytracing-3/shadmask.jpg" style="width: 60%">
+<img src="/imgs/taichi-raytracing-3/shadmask.jpg" style="width: 60%">
 </figure>
 
 几何遮挡函数的值通常介于 0 到 1 之间，表示微平面能有效反射光的概率：
@@ -682,7 +682,7 @@ $$
 在微平面模型中，所有宏观反射均被视为是由微观的微平面的镜面反射统计形成。对于入射方向 $\boldsymbol{\omega}_i$，出射方向 $\boldsymbol{\omega}_o$，其宏观反射由法线为 $\boldsymbol{h}$ 的微平面形成，如图所示:
 
 <figure>
-<img src="https://jeffreyxiang.github.io/imgs/taichi-raytracing-3/half_vector.jpg" style="width: 60%">
+<img src="/imgs/taichi-raytracing-3/half_vector.jpg" style="width: 60%">
 </figure>
 
 其中微平面法线为半程向量
@@ -718,7 +718,7 @@ $$
 考察半程向量球面微元和入射方向球面微元的关系：
 
 <figure>
-<img src="https://jeffreyxiang.github.io/imgs/taichi-raytracing-3/dh_dwi.png" style="width: 90%">
+<img src="/imgs/taichi-raytracing-3/dh_dwi.png" style="width: 90%">
 </figure>
 
 如图所示，对于平行于反射平面上的长度 $x$（中图），
@@ -1053,8 +1053,8 @@ $$
 
 <figure>
     <img-comparison-slider style="width: 100%">
-        <img slot="first" style="width: 100%" src="https://jeffreyxiang.github.io/imgs/taichi-raytracing-3/20_ggx_nis.jpg" />
-        <img slot="second" style="width: 100%" src="https://jeffreyxiang.github.io/imgs/taichi-raytracing-3/20_ggx_is.jpg" />
+        <img slot="first" style="width: 100%" src="/imgs/taichi-raytracing-3/20_ggx_nis.jpg" />
+        <img slot="second" style="width: 100%" src="/imgs/taichi-raytracing-3/20_ggx_is.jpg" />
     </img-comparison-slider>
     <figcaption>左：均匀采样 | 右：重要性采样</figcaption>
 </figure>
@@ -1066,7 +1066,7 @@ $$
 <figure>
     <img-comparison-slider style="width: 100%">
         <img slot="first" style="width: 100%" src="/imgs/taichi-raytracing-2/blender_ref.jpg" />
-        <img slot="second" style="width: 100%" src="https://jeffreyxiang.github.io/imgs/taichi-raytracing-3/20_ggx_is.jpg" />
+        <img slot="second" style="width: 100%" src="/imgs/taichi-raytracing-3/20_ggx_is.jpg" />
     </img-comparison-slider>
     <figcaption>左：Blender Cycles 渲染结果 | 右：我们实现的基于 GGX BRDF 的 PBR 渲染结果</figcaption>
 </figure>
@@ -1352,8 +1352,8 @@ if bounce == 0 or record.prim_type != PrimitiveType.LIGHT:
 
 <figure>
     <img-comparison-slider style="width: 100%">
-        <img slot="first" style="width: 100%" src="https://jeffreyxiang.github.io/imgs/taichi-raytracing-3/21_nee_rw.jpg" />
-        <img slot="second" style="width: 100%" src="https://jeffreyxiang.github.io/imgs/taichi-raytracing-3/21_nee_nee.jpg" />
+        <img slot="first" style="width: 100%" src="/imgs/taichi-raytracing-3/21_nee_rw.jpg" />
+        <img slot="second" style="width: 100%" src="/imgs/taichi-raytracing-3/21_nee_nee.jpg" />
     </img-comparison-slider>
     <figcaption>左：随机游走 | 右：直接光源采样。</figcaption>
 </figure>
@@ -1367,7 +1367,7 @@ if bounce == 0 or record.prim_type != PrimitiveType.LIGHT:
 使用 **直接光源采样**，我们得到：
 
 <figure>
-<img src="https://jeffreyxiang.github.io/imgs/taichi-raytracing-3/22_mis_nmis.jpg" style="width: 100%">
+<img src="/imgs/taichi-raytracing-3/22_mis_nmis.jpg" style="width: 100%">
 </figure>
 
 对于 **较低粗糙度（接近镜面）** 且 **光源较大** 的区域，可以看到明显的噪点和伪影。这是因为光源采样的方向分布与镜面反射的能量分布差异很大，导致大多数样本几乎没有贡献。
@@ -1375,7 +1375,7 @@ if bounce == 0 or record.prim_type != PrimitiveType.LIGHT:
 相反，如果我们直接使用最开始的 **基于 BSDF 重要性采样** 的随机游走追踪器（即不进行显式光源采样），则得到：
 
 <figure>
-<img src="https://jeffreyxiang.github.io/imgs/taichi-raytracing-3/22_mis_rw.jpg" style="width: 100%">
+<img src="/imgs/taichi-raytracing-3/22_mis_rw.jpg" style="width: 100%">
 </figure>
 
 这次表现刚好相反：**低粗糙度材质** 上的结果比较平滑，但对于 **高粗糙度材质** 或者 **小光源**，因为 BSDF 采样很难命中光源，反而出现严重噪声。
@@ -1631,8 +1631,8 @@ elif self.nee_multi_importance_sampling:
 
 <figure>
     <img-comparison-slider style="width: 100%">
-        <img slot="first" style="width: 100%" src="https://jeffreyxiang.github.io/imgs/taichi-raytracing-3/22_mis_nmis.jpg" />
-        <img slot="second" style="width: 100%" src="https://jeffreyxiang.github.io/imgs/taichi-raytracing-3/22_mis_mis.jpg" />
+        <img slot="first" style="width: 100%" src="/imgs/taichi-raytracing-3/22_mis_nmis.jpg" />
+        <img slot="second" style="width: 100%" src="/imgs/taichi-raytracing-3/22_mis_mis.jpg" />
     </img-comparison-slider>
     <figcaption>左：朴素直接光源采样 | 右：直接光源采样配合多重重要性采样。</figcaption>
 </figure>
@@ -1943,8 +1943,8 @@ $$
 
 <figure>
     <img-comparison-slider style="width: 100%">
-        <img slot="first" style="width: 100%" src="https://jeffreyxiang.github.io/imgs/taichi-raytracing-3/23_envmap_is_nis.jpg" />
-        <img slot="second" style="width: 100%" src="https://jeffreyxiang.github.io/imgs/taichi-raytracing-3/23_envmap_is_is.jpg" />
+        <img slot="first" style="width: 100%" src="/imgs/taichi-raytracing-3/23_envmap_is_nis.jpg" />
+        <img slot="second" style="width: 100%" src="/imgs/taichi-raytracing-3/23_envmap_is_is.jpg" />
     </img-comparison-slider>
     <figcaption>左：环境光随机采样 | 右：环境光重要性采样。</figcaption>
 </figure>
@@ -1960,8 +1960,8 @@ $$
 
 <figure>
     <img-comparison-slider style="width: 100%">
-        <img slot="first" style="width: 100%" src="https://jeffreyxiang.github.io/imgs/taichi-raytracing-3/23_envmap_helmet_nis.jpg" />
-        <img slot="second" style="width: 100%" src="https://jeffreyxiang.github.io/imgs/taichi-raytracing-3/23_envmap_helmet_is.jpg" />
+        <img slot="first" style="width: 100%" src="/imgs/taichi-raytracing-3/23_envmap_helmet_nis.jpg" />
+        <img slot="second" style="width: 100%" src="/imgs/taichi-raytracing-3/23_envmap_helmet_is.jpg" />
     </img-comparison-slider>
     <figcaption>左：环境光随机采样 | 右：环境光重要性采样。</figcaption>
 </figure>
@@ -2323,7 +2323,7 @@ def query(self, id, query_point, query_normal):
 > * 采样策略：均匀采样
 
 <figure>
-<img style="width: 100%" src="https://jeffreyxiang.github.io/imgs/taichi-raytracing-3/24_multi_light_rw.jpg">
+<img style="width: 100%" src="/imgs/taichi-raytracing-3/24_multi_light_rw.jpg">
 </figure>
 
 最朴素的随机游走算法，每次反射方向均匀采样球面。
@@ -2334,7 +2334,7 @@ def query(self, id, query_point, query_normal):
 > * 采样策略：BSDF 重要性采样
 
 <figure>
-<img style="width: 100%" src="https://jeffreyxiang.github.io/imgs/taichi-raytracing-3/24_multi_light_rw_is.jpg">
+<img style="width: 100%" src="/imgs/taichi-raytracing-3/24_multi_light_rw_is.jpg">
 </figure>
 
 通过根据表面材质分布（BSDF）进行采样，
@@ -2348,7 +2348,7 @@ def query(self, id, query_point, query_normal):
 > * 采样策略：BSDF 重要性采样 + 光源功率采样
 
 <figure>
-<img style="width: 100%" src="https://jeffreyxiang.github.io/imgs/taichi-raytracing-3/24_multi_light_nee.jpg">
+<img style="width: 100%" src="/imgs/taichi-raytracing-3/24_multi_light_nee.jpg">
 </figure>
 
 引入 **Next Event Estimation (NEE)** 后，每次弹射会额外采样一个光源进行直接光照估计。
@@ -2360,7 +2360,7 @@ def query(self, id, query_point, query_normal):
 > * 采样策略：BSDF 重要性采样 + LightBVH 采样
 
 <figure>
-<img style="width: 100%" src="https://jeffreyxiang.github.io/imgs/taichi-raytracing-3/24_multi_light_nee_bvh.jpg">
+<img style="width: 100%" src="/imgs/taichi-raytracing-3/24_multi_light_nee_bvh.jpg">
 </figure>
 
 当使用 **LightBVH** 进行光源采样后，
@@ -2374,7 +2374,7 @@ def query(self, id, query_point, query_normal):
 > * 采样策略：BSDF 重要性采样 + LightBVH 采样 + 多重重要性采样
 
 <figure>
-<img style="width: 100%" src="https://jeffreyxiang.github.io/imgs/taichi-raytracing-3/24_multi_light_nee_bvh_mis.jpg">
+<img style="width: 100%" src="/imgs/taichi-raytracing-3/24_multi_light_nee_bvh_mis.jpg">
 </figure>
 
 结合本文介绍的所有技术：
@@ -2388,8 +2388,8 @@ def query(self, id, query_point, query_normal):
 
 <figure>
     <img-comparison-slider style="width: 100%">
-        <img slot="first" style="width: 100%" src="https://jeffreyxiang.github.io/imgs/taichi-raytracing-3/24_multi_light_blender_ref.jpg" />
-        <img slot="second" style="width: 100%" src="https://jeffreyxiang.github.io/imgs/taichi-raytracing-3/24_multi_light_nee_bvh_mis.jpg" />
+        <img slot="first" style="width: 100%" src="/imgs/taichi-raytracing-3/24_multi_light_blender_ref.jpg" />
+        <img slot="second" style="width: 100%" src="/imgs/taichi-raytracing-3/24_multi_light_nee_bvh_mis.jpg" />
     </img-comparison-slider>
     <figcaption>左：Blender Cycles 渲染结果 | 右：基于 Taichi 的渲染器结果</figcaption>
 </figure>

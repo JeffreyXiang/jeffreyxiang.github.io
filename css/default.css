@@ -16,10 +16,11 @@ body {
 }
 
 #main {
-    width: 1000px;
+    width: 100%;
+    max-width: 1032px;
+    box-sizing: border-box;
     margin: 0px auto;
-    padding-top: 50px;
-    padding-bottom: 200px;
+    padding: 50px 16px 200px;
 }
 
 .title {
@@ -119,7 +120,7 @@ body {
 }
 
 #profile_intro {
-    width: 800px;
+    max-width: 800px;
     margin: 10px auto 25px;
     font-size: 16px;
     font-weight: 400;
@@ -211,7 +212,7 @@ body {
 }
 
 .publication_item {
-    width: 1000px;
+    width: 100%;
     margin: 25px 0px;
     display: flex;
     justify-content: center;
@@ -219,6 +220,7 @@ body {
 }
 
 .publication_item_teaser {
+    flex: 0 0 auto;
     width: 200px;
     height: 200px;
     display: flex;
@@ -228,7 +230,9 @@ body {
 
 .publication_item_text {
     position: relative;
-    width: 800px;
+    flex: 1 1 auto;
+    min-width: 0;
+    max-width: 800px;
     margin-left: 25px;
     padding-left: 16px;
     display: flex;
@@ -342,25 +346,6 @@ body {
     margin-right: 8px;
 }
 
-/* .publication_item_abstract::after {
-    content: "...";
-    position: absolute;
-    bottom: 2px;
-    right: 0px;
-    background: #fff;
-}
-
-.publication_item_abstract .publication_item_abstract_full {
-    position: absolute;
-    left: 0px;
-    top: 0px;
-    font-size: 16px;
-    font-weight: 300;
-    margin-top: 10px;
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-}  */
 
 .blog_container {
     display: flex;
@@ -459,9 +444,10 @@ body {
 }
 
 .application_list {
-    width: 1000px;
+    width: 100%;
     margin: 25px auto;
     display: flex;
+    flex-wrap: wrap;
     justify-content: flex-start;
     align-items: flex-start;
 }
@@ -531,4 +517,124 @@ body {
 ::selection
 {
 	background: rgba(127,127,127,0.5);
-} 
+}
+
+/* ====== Responsive ====== */
+
+/* Blogs: two masonry columns need ~1024px; below that use a single column */
+@media screen and (max-width: 1056px) {
+    .blog_container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .blog_container_col {
+        width: 100%;
+        max-width: 500px;
+    }
+
+    .blog_item {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .title {
+        margin: 24px 0px;
+        font-size: 40px;
+    }
+
+    #profile {
+        padding-top: 24px;
+    }
+
+    #profile_photo {
+        width: 100%;
+        max-width: 400px;
+        height: auto;
+        aspect-ratio: 1 / 1;
+        object-fit: cover;
+        margin: 10px 0px;
+    }
+
+    #profile_card {
+        width: 100%;
+        max-width: 400px;
+        box-sizing: border-box;
+        height: auto;
+        margin: 10px 0px;
+        gap: 16px;
+    }
+
+    #profile_name_en,
+    #profile_name_zh {
+        font-size: 30px;
+    }
+
+    #profile_intro {
+        margin: 16px auto 24px;
+        text-align: left;
+    }
+
+    .publication_item {
+        margin: 20px 0px;
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .publication_item_teaser {
+        width: 100%;
+        height: auto;
+        margin-bottom: 12px;
+    }
+
+    .publication_item_teaser video,
+    .publication_item_teaser img {
+        width: 100%;
+        max-width: 320px;
+        height: auto;
+    }
+
+    .publication_item_text {
+        max-width: none;
+        margin-left: 0px;
+    }
+
+    .publication_item_title {
+        font-size: 20px;
+    }
+
+    .publication_item_authors,
+    .publication_item_location,
+    .publication_item_abstract {
+        font-size: 15px;
+    }
+
+    .publication_item_abstract {
+        margin-top: 12px;
+        text-align: left;
+    }
+
+    .blog_item_teaser {
+        height: auto;
+        aspect-ratio: 2 / 1;
+    }
+
+    .blog_item_title {
+        font-size: 18px;
+    }
+
+    .application_list {
+        justify-content: center;
+    }
+
+    .application_item {
+        width: 150px;
+        height: 150px;
+    }
+
+    .application_item_icon img {
+        width: 96px;
+        height: 96px;
+    }
+}

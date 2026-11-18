@@ -36,7 +36,10 @@ application_order:
 # Handling Reading
 safe                : false
 include             : [".htaccess"]
-exclude             : ["Gemfile", "Gemfile.lock", "node_modules", "vendor/bundle/", "vendor/cache/", "vendor/gems/", "vendor/ruby/"]
+exclude             : ["Gemfile", "Gemfile.lock", "node_modules", "vendor", "CLAUDE.md", "AGENTS.md",
+                       # unreferenced source / font-pack demo files
+                       "misc", "fonts/avenir/*", "fonts/config/*", "fonts/avenir-next/demo.html",
+                       "icons/demo.html", "icons/demo-files", "icons/selection.json", "icons/Read Me.txt"]
 keep_files          : [".git", ".svn"]
 encoding            : "utf-8"
 markdown_ext        : "markdown,mkdown,mkdn,mkd,md"

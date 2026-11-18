@@ -57,3 +57,16 @@
 .bottombar_contact_icon.icon-logo-zhihu:hover {
     color: #056de8;
 }
+
+@media screen and (max-width: 768px) {
+    #bottombar {
+        height: auto;
+        width: 100%;
+        box-sizing: border-box;
+        padding: 12px 16px;
+        flex-direction: column;
+        justify-content: center;
+        gap: 8px;
+        text-align: center;
+    }
+}

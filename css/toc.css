@@ -52,3 +52,35 @@
     font-weight: bold;
     color: rgb(32, 163, 196);
 }
+
+/* ====== Collapsible TOC shown above the post when the sidebar is hidden ====== */
+.toc-mobile {
+    display: none;
+}
+
+@media screen and (max-width: 1056px) {
+    .toc-mobile {
+        display: block;
+        margin: 16px 0px 8px;
+        padding: 8px 12px;
+        background-color: rgb(248, 248, 248);
+        border-left: 3px solid rgb(32, 163, 196);
+    }
+
+    .toc-mobile summary {
+        font-weight: 300;
+        font-size: 1.1rem;
+        color: #333;
+        cursor: pointer;
+    }
+
+    .toc-mobile .toc {
+        max-height: 50vh;
+        margin-top: 8px;
+    }
+
+    .toc-mobile .toc > ul {
+        padding-left: 0px;
+    }
+}
+

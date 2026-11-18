@@ -1,6 +1,8 @@
-<html lang="en">
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: 'en' }}">
     <head>
         <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Jianfeng Xiang | Blogs | {{ page.title }}</title>
         <link rel="icon" href="/favicon.png">
         <link rel="stylesheet" href="/fonts/avenir-next/stylesheet.css">
@@ -25,7 +27,7 @@
     <body>
         {% include topbar.html %}
         <div id="main">
-            <aside style="flex: 0 0 200px;">
+            <aside class="toc-aside">
                 <div class="toc-container">
                     <div class="toc-title">CONTENTS</div>
                     <div class="toc">
@@ -33,7 +35,13 @@
                     </div>
                 </div>
             </aside>
-            <main style="flex: 1; min-width: 0;">
+            <main class="post-main">
+                <details class="toc-mobile">
+                    <summary>CONTENTS</summary>
+                    <div class="toc">
+                        {% include toc.html html=content h_min=2 h_max=3 %}
+                    </div>
+                </details>
                 <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
                     <header class="post-header">
                         {%- if page.teaser -%}
@@ -74,6 +82,7 @@
                         &nbsp;<a class="icon-logo-zhihu" href="{{ page.zhihu }}" target="_blank"></a>
                         {%- endif -%}
                         {%- endif -%}
+                        </div>
                     </header>
                 
                     <div class="post-content e-content" itemprop="articleBody">

@@ -389,7 +389,6 @@ dl, dd, ol, ul, figure {
  * Basic styling
  */
 #main {
-    width: 1000px;
     font-weight: 400;
     font-size: 16px;
     line-height: 1.5;
@@ -534,6 +533,11 @@ figure.highlight td.code {
 code.highlighter-rouge {
     padding: 2px 5px;
     font-size: 14px;
+}
+
+/* Long inline code (file paths, identifiers) may break anywhere instead of widening the page */
+.post-content code.highlighter-rouge {
+    overflow-wrap: anywhere;
 }
 
 /**
@@ -727,4 +731,66 @@ table td {
 }
 .post-content h6 {
     font-size: 1.0625rem;
+}
+
+.toc-aside {
+    flex: 0 0 200px;
+}
+
+.post-main {
+    flex: 1;
+    min-width: 0;
+}
+
+/* Wide display equations scroll instead of overflowing the column */
+mjx-container[display="true"] {
+    max-width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+/* ====== Responsive: no room for the TOC sidebar ====== */
+@media screen and (max-width: 1056px) {
+    #main {
+        flex-direction: column;
+        gap: 0px;
+    }
+
+    .toc-aside {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .post-header {
+        margin-top: 0px;
+        margin-bottom: 24px;
+        padding-bottom: 24px;
+    }
+
+    .post-teaser,
+    .post-teaser img {
+        min-height: 0px;
+    }
+
+    .post-title,
+    .post-content h1 {
+        font-size: 1.875rem;
+        letter-spacing: 0px;
+    }
+
+    .post-content {
+        margin-bottom: 60px;
+        text-align: left;
+    }
+
+    pre {
+        font-size: 13px;
+    }
+
+    /* Side-by-side figures written inline in posts stack on phones */
+    figure.image[style*="inline-block"] {
+        width: 100% !important;
+        display: block !important;
+    }
 }

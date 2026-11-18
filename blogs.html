@@ -8,17 +8,26 @@ title: Jianfeng Xiang | Blogs
 $(function(){
     var $left = $("#col-left");
     var $right = $("#col-right");
+    var cards = $("#all-posts .blog_item").toArray();   // newest first
+    var twoColumns = null;
 
-    $("#all-posts .blog_item").each(function(){
-        var $card = $(this);
-        var leftH = $left.outerHeight();
-        var rightH = $right.outerHeight();
-        if (leftH <= rightH) {
-        $left.append($card);
-        } else {
-        $right.append($card);
-        }
-    });
+    // Wide screens: greedy masonry into the shorter column. Narrow screens: one column in date order.
+    function layout() {
+        var wide = window.matchMedia("(min-width: 1057px)").matches;
+        if (wide === twoColumns) return;
+        twoColumns = wide;
+        $(cards).detach();
+        $.each(cards, function(_, card){
+            if (!wide || $left.outerHeight() <= $right.outerHeight()) {
+                $left.append(card);
+            } else {
+                $right.append(card);
+            }
+        });
+    }
+
+    layout();
+    $(window).on("resize", layout);
 });
 </script>
 

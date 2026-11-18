@@ -70,3 +70,79 @@
 .topbar_button:hover::before {
     height: 96%;
 }
+
+#topbar_nav {
+    display: flex;
+    align-items: center;
+}
+
+#topbar_toggle,
+#topbar_toggle_button {
+    display: none;
+}
+
+/* ====== Mobile: collapse navigation into a dropdown (CSS-only checkbox toggle) ====== */
+@media screen and (max-width: 768px) {
+    #topbar_title {
+        font-size: 20px;
+        padding: 0 12px;
+    }
+
+    #topbar_toggle_button {
+        width: 44px;
+        height: 50px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
+        cursor: pointer;
+    }
+
+    #topbar_toggle_button span {
+        width: 20px;
+        height: 2px;
+        background-color: gray;
+        transition: transform 0.2s ease, opacity 0.2s ease;
+    }
+
+    #topbar_toggle:checked + #topbar_toggle_button span:nth-child(1) {
+        transform: translateY(7px) rotate(45deg);
+    }
+
+    #topbar_toggle:checked + #topbar_toggle_button span:nth-child(2) {
+        opacity: 0;
+    }
+
+    #topbar_toggle:checked + #topbar_toggle_button span:nth-child(3) {
+        transform: translateY(-7px) rotate(-45deg);
+    }
+
+    #topbar_nav {
+        position: absolute;
+        top: 50px;
+        left: 0px;
+        width: 100%;
+        background-color: white;
+        box-shadow: 0px 6px 10px 0px rgba(0, 0, 0, 0.1);
+        flex-direction: column;
+        align-items: stretch;
+        display: none;
+    }
+
+    #topbar_toggle:checked ~ #topbar_nav {
+        display: flex;
+    }
+
+    .topbar_button {
+        height: 44px;
+        margin: 0px;
+        padding: 0px 24px;
+        justify-content: flex-start;
+        border-top: 1px solid #f0f0f0;
+    }
+
+    .topbar_button::before {
+        display: none;
+    }
+}

@@ -233,7 +233,7 @@ $$
 \end{gather}
 $$
 
-令 $a=\sin\angle E_2E_1D_3=\frac{r_1-r_2}{\|\boldsymbol E_2-\boldsymbol E_1\|},b=\cos\angle E_2E_1D_3=\sqrt{1-a^2}$，可以得到
+令 $a=\sin\angle E_2E_1D_3=\frac{r_1-r_2}{\|\boldsymbol E_2-\boldsymbol E_1\|}$, $b=\cos\angle E_2E_1D_3=\sqrt{1-a^2}$，可以得到
 
 $E_1D_3$ 的长度为 $b\|\boldsymbol E_2-\boldsymbol E_1\|$ 方向的单位向量为 $\boldsymbol L=(b,-a)$，其逆时针转90°的单位法向量为 $\boldsymbol N=(a,b)$，类似胶囊SDF函数有
 
